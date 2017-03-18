@@ -1,8 +1,9 @@
-var Metalsmith = require('metalsmith');
-var collections = require('metalsmith-collections');
-var layouts = require('metalsmith-layouts');
-var markdown = require('metalsmith-markdown');
-var permalinks = require('metalsmith-permalinks');
+const Metalsmith = require('metalsmith');
+const collections = require('metalsmith-collections');
+const layouts = require('metalsmith-layouts');
+const markdown = require('metalsmith-markdown');
+const permalinks = require('metalsmith-permalinks');
+const assets = require('metalsmith-assets');
 
 module.exports = Metalsmith(__dirname) // __dirname defined by node.js:
     // name of current working directory
@@ -12,9 +13,13 @@ module.exports = Metalsmith(__dirname) // __dirname defined by node.js:
         siteurl: 'http://example.com/',
         description: ''
     })
-    .source('./src') // source directory
+    .source('./data') // source directory
     .destination('./build') // destination directory
     .clean(true) // clean destination before
+    .use(assets({
+        origin: 'public',
+        destination: 'static'
+    }))
     .use(collections({
         jobs: 'jobs/*.md',
         equipment: 'equipment/*.md'
