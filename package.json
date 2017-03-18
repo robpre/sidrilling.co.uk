@@ -4,15 +4,19 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy-pre-release": "node ./index.js && node deploy.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "ftp": "^0.3.10",
+    "handlebars": "^4.0.6",
     "metalsmith": "^2.3.0",
     "metalsmith-collections": "^0.9.0",
     "metalsmith-layouts": "^1.8.0",
     "metalsmith-markdown": "^0.2.1",
-    "metalsmith-permalinks": "^0.5.0"
+    "metalsmith-permalinks": "^0.5.0",
+    "simple-autoreload-server": "^0.2.6"
   }
 }

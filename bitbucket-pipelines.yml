@@ -6,8 +6,18 @@
 image: node:7.7.3
 
 pipelines:
-  default:
-    - step:
-        script: # Modify the commands below to build your repository.
-          - npm install
-          - npm test
+  branches:
+    develop:
+      - step:
+          script:
+            - npm install
+            - npm run lint
+            # - npm run test
+            - npm run deploy-pre-release
+    master:
+      - step:
+          script: # Modify the commands below to build your repository.
+            - echo "not deploying to master"
+            - exit 1
+            - npm install
+            - npm test
