@@ -1,4 +1,5 @@
 ---
+layout: layout.hbs
 title: Dando 2000 Mk 2
 ---
 

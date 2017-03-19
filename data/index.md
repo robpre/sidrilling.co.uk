@@ -1,4 +1,6 @@
 ---
 title: index
+layout: layout.hbs
 ---
-Hello world 
+Hello world
+s

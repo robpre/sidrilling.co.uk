@@ -2,24 +2,43 @@
   "name": "sidrilling.co.uk",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "metalsmith.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint .",
-    "deploy-pre-release": "node ./index.js && node deploy.js"
+    "start": "metalsmith-start",
+    "build": "node metalsmith.js",
+    "deploy-pre-release": "node ./metalsmith.js && node ./tasks/deploy.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "autoprefixer": "^6.7.7",
+    "browserify": "^14.1.0",
+    "classlist-polyfill": "^1.0.3",
+    "cssnano": "^3.10.0",
+    "debounce": "^1.0.0",
     "eslint": "^3.18.0",
+    "foundation-sandboxed": "^5.4.5-sandboxed.1",
     "ftp": "^0.3.10",
+    "hamburgers": "^0.8.1",
     "handlebars": "^4.0.6",
+    "headroom.js": "^0.9.3",
+    "jquery": "^3.2.0",
     "metalsmith": "^2.3.0",
     "metalsmith-assets": "^0.1.0",
+    "metalsmith-browserify": "^0.2.4",
     "metalsmith-collections": "^0.9.0",
     "metalsmith-layouts": "^1.8.0",
     "metalsmith-markdown": "^0.2.1",
     "metalsmith-permalinks": "^0.5.0",
-    "simple-autoreload-server": "^0.2.6"
+    "metalsmith-postcss": "git+ssh://git@github.com/RpprRoger/metalsmith-postcss.git#master",
+    "postcss-import": "^9.1.0",
+    "request-frame": "^1.5.3",
+    "simple-autoreload-server": "^0.2.6",
+    "stat-mode": "^0.2.2"
+  },
+  "devDependencies": {
+    "metalsmith-start": "^2.0.1"
   }
 }

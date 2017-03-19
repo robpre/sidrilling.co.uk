@@ -4,8 +4,10 @@ const layouts = require('metalsmith-layouts');
 const markdown = require('metalsmith-markdown');
 const permalinks = require('metalsmith-permalinks');
 const assets = require('metalsmith-assets');
+const browserify = require('metalsmith-browserify');
+const postcss = require('metalsmith-postcss');
 
-const setLayout = require('./plugins/set-layout');
+const addCss = require('./plugins/addCss');
 
 module.exports = Metalsmith(__dirname)
     .metadata({
@@ -16,15 +18,36 @@ module.exports = Metalsmith(__dirname)
     .source('./data')
     .destination('./build')
     .clean(true)
+    .use(browserify({
+        dest: 'js/script.js',
+        entries: ['./src/js/main.js'],
+        sourcemaps: process.env.NODE_ENV === 'development'
+    }))
     .use(assets({
-        origin: './public/favicons/',
+        origin: './public/',
         destination: './'
     }))
+    .use(addCss({
+        origin: './src/css/styles.css',
+        destination: 'css/styles.css'
+    }))
+    .use(postcss({
+        plugins: {
+            'postcss-import': {},
+            'autoprefixer': {},
+            'cssnano': {}
+        },
+        map: {
+            inline: false
+        }
+    }))
+    .use((...args) => {
+        debugger;
+    })
     .use(collections({
         jobs: 'jobs/*.md',
         equipment: 'equipment/*.md'
     }))
-    .use(setLayout)
     .use(markdown())
     .use(permalinks({
         relative: false
