@@ -3,7 +3,7 @@ install:
 script:
   - npm run lint
   - npm run build
-  - if [[ $TRAVIS_BRANCH == 'develop' ]] npm run deploy-drafts
+  - [[ $TRAVIS_BRANCH == 'develop' ]] && npm run deploy-drafts
 branches:
   only:
     - develop
