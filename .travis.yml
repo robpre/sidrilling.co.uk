@@ -1,9 +1,14 @@
+language: node_js
+node_js:
+  - '7.7.3'
 install:
   - npm install --production
 script:
   - npm run lint
   - npm run build
-  - [[ $TRAVIS_BRANCH == 'develop' ]] && npm run deploy-drafts
+  - if [ "$TRAVIS_BRANCH" == "develop" ]; then
+      npm run deploy-drafts;
+    fi
 branches:
   only:
     - develop
