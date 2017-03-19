@@ -35,7 +35,7 @@
     "metalsmith-layouts": "^1.8.0",
     "metalsmith-markdown": "^0.2.1",
     "metalsmith-permalinks": "^0.5.0",
-    "metalsmith-postcss": "git+ssh://git@github.com/RpprRoger/metalsmith-postcss.git#master",
+    "metalsmith-postcss": "git+https://github.com/RpprRoger/metalsmith-postcss.git",
     "postcss-import": "^9.1.0",
     "progress-barjs": "^2.2.1",
     "request-frame": "^1.5.3",
