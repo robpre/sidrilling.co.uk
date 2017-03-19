@@ -5,38 +5,32 @@ const markdown = require('metalsmith-markdown');
 const permalinks = require('metalsmith-permalinks');
 const assets = require('metalsmith-assets');
 
-module.exports = Metalsmith(__dirname) // __dirname defined by node.js:
-    // name of current working directory
-    .metadata({ // add any variable you want
-        // use them in layout-files
+const setLayout = require('./plugins/set-layout');
+
+module.exports = Metalsmith(__dirname)
+    .metadata({
         sitename: 'S I Drilling',
         siteurl: 'http://example.com/',
         description: ''
     })
-    .source('./data') // source directory
-    .destination('./build') // destination directory
-    .clean(true) // clean destination before
+    .source('./data')
+    .destination('./build')
+    .clean(true)
     .use(assets({
-        origin: 'public',
-        destination: 'static'
+        origin: './public/favicons/',
+        destination: './'
     }))
     .use(collections({
         jobs: 'jobs/*.md',
         equipment: 'equipment/*.md'
     }))
-    .use(function(articles) {
-        Object.keys(articles).forEach(key => {
-            const art = articles[key];
-
-            art.layout = 'layout.hbs';
-        });
-    })
-    .use(markdown()) // transpile all md into html
-    .use(permalinks({ // change URLs to permalink URLs
-        relative: false // put css only in /css
+    .use(setLayout)
+    .use(markdown())
+    .use(permalinks({
+        relative: false
     }))
-    .use(layouts({ // wrap layouts around html
-        engine: 'handlebars', // use the layout engine you like
+    .use(layouts({
+        engine: 'handlebars',
         partials: './views/partials',
         directory: './views/layouts',
         partialExtension: '.hbs'
