@@ -6,9 +6,12 @@ const barFactory = require('progress-barjs');
 const ftpDeploy = new FtpDeploy();
 // const client = new Client();
 
-ftpDeploy.on('upload-error', function (data) {
+function printError (data) {
     console.error(data.err); // data will also include filename, relativePath, and other goodies
-});
+}
+
+ftpDeploy.on('upload-error', printError);
+ftpDeploy.on('error', printError);
 
 const bar = barFactory({
     info: 'Uploading files...',
