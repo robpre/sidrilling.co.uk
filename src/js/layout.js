@@ -1,7 +1,6 @@
 var $ = require('jquery');
 var debounce = require('debounce');
 var Headroom = require('headroom.js');
-
 var $head = $('header');
 var $main = $('main');
 var $tail = $('footer');

@@ -1,5 +1,6 @@
 ---
 title: Willoughby Lane
+layout: layout.hbs
 date: 2012-08-20
 ---
 Through 2016, S I Drilling has been drilling holes to a maximum depth of 50m using 300mm, 250mm, 200mm and 150mm casing. Alongside this, we are installing valuable stainless steel standpipes in some of the boreholes that will be used in a pumping and filtration process to help clean the soils.
