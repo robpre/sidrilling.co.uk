@@ -1,15 +1,3 @@
-<!DOCTYPE html>
-<html>
-    {{> head}}
-    <body>
-        {{> header}}
-        <main>
-            <div class="scrollable content row">
-                <div class="columns">
-                    {{{contents}}}
-                </div>
-            </div>
-        </main>
-        {{> footer}}
-    </body>
-</html>
+{{#> layout }}
+  {{{contents}}}
+{{/layout}}

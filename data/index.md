@@ -1,5 +1,5 @@
 ---
-title: index
+title: Home
 layout: layout.hbs
 ---
 Hello world

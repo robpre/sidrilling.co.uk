@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint .",
-    "start": "metalsmith-start",
+    "start": "node tasks/dev.j",
     "build": "node metalsmith.js",
     "deploy-drafts": "TARGET_ENV=drafts node ./tasks/deploy.js",
     "deploy-locally": "node -r dotenv/config ./tasks/deploy.js"
@@ -16,7 +16,9 @@
   "dependencies": {
     "autoprefixer": "^6.7.7",
     "browserify": "^14.1.0",
+    "circular-json": "^0.3.1",
     "classlist-polyfill": "^1.0.3",
+    "concurrently": "^3.4.0",
     "cssnano": "^3.10.0",
     "debounce": "^1.0.0",
     "dotenv": "^4.0.0",
@@ -32,17 +34,20 @@
     "metalsmith-assets": "^0.1.0",
     "metalsmith-browserify": "^0.2.4",
     "metalsmith-collections": "^0.9.0",
+    "metalsmith-discover-helpers": "^0.1.0",
     "metalsmith-layouts": "^1.8.0",
     "metalsmith-markdown": "^0.2.1",
     "metalsmith-permalinks": "^0.5.0",
-    "metalsmith-postcss": "git+https://github.com/RpprRoger/metalsmith-postcss.git",
+    "metalsmith-postcss": "^4.0.1",
     "postcss-import": "^9.1.0",
     "progress-barjs": "^2.2.1",
     "request-frame": "^1.5.3",
-    "simple-autoreload-server": "^0.2.6",
     "stat-mode": "^0.2.2"
   },
   "devDependencies": {
-    "metalsmith-start": "^2.0.1"
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "gaze": "^1.1.2",
+    "reload": "^1.1.1"
   }
 }

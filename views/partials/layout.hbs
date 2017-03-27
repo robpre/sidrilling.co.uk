@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    {{> head}}
+    <body>
+        {{> header}}
+        {{log this}}
+        <main>
+            <div class="scrollable content row">
+                <div class="columns">
+                    {{> @partial-block}}
+                    {{{devPre this}}}
+                </div>
+            </div>
+        </main>
+        {{> footer}}
+    </body>
+</html>

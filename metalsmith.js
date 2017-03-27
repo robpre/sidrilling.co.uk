@@ -6,6 +6,7 @@ const permalinks = require('metalsmith-permalinks');
 const assets = require('metalsmith-assets');
 const browserify = require('metalsmith-browserify');
 const postcss = require('metalsmith-postcss');
+const findHelpers = require('metalsmith-discover-helpers');
 
 const addCss = require('./plugins/addCss');
 
@@ -52,6 +53,7 @@ module.exports = Metalsmith(__dirname)
     .use(permalinks({
         relative: false
     }))
+    .use(findHelpers())
     .use(layouts({
         engine: 'handlebars',
         partials: './views/partials',

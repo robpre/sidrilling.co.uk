@@ -1,6 +1,7 @@
 ---
 layout: layout.hbs
 title: Dando 2000 Mk 2
+image: dando2000.png
 ---
 
 Capable of drilling to a maximum depth of 50m finishing in 150mm
