@@ -1,34 +1,46 @@
 <header>
     <div class="row">
-        <div class="columns large-8 logo">
-            <div class="row">
-                <div class="columns small-8">
-                    <h1>
-                        <a href="/">
-                            SI Drilling
-                            <span>Cable Percussion Ltd.</span>
-                        </a>
-                    </h1>
-                </div>
-                <div class="columns small-4">
-                    <button class="show-for-small-only hamburger hamburger--squeeze" type="button">
-                        <span class="hamburger-box">
-                            <span class="hamburger-inner"></span>
-                        </span>
-                    </button>
+        <div class="columns small-8 medium-12">
+            <div class="logo-quick-contact">
+                <div class="row">
+                    <div class="columns small-12 medium-3">
+                        <h1 class="logo">
+                            <a href="/">
+                                SI Drilling
+                                <span>Cable Percussion Ltd.</span>
+                            </a>
+                        </h1>
+                    </div>
+                    <div class="columns small-12 medium-9">
+                        <div class="show-for-medium-up row">
+                            <div class="columns medium-3">
+                                {{> quick_contact}}
+                            </div>
+                            <div class="columns medium-3">
+                                <img src="http://placehold.it/100x100">
+                            </div>
+                            <div class="columns medium-3">
+                                <img src="http://placehold.it/100x100">
+                            </div>
+                            <div class="columns medium-3">
+                                <img src="http://placehold.it/100x100">
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="hide js-mobile-nav show-for-small-only">{{> header_nav classes="hide"}}</div>
-            <div class="show-for-medium-up">{{> header_nav}}</div>
         </div>
-        <div class="columns large-4 quick-contact show-for-large-up">
-            <section>
-                <ul>
-                    <li><a href="mailto://sales@sidrilling.co.uk">sales@sidrilling.co.uk</a></li>
-                    <li><a href="tel://01603720271">01603 720271</a></li>
-                    <li><a href="tel://07785313447">07785 313447</a></li>
-                </ul>
-            </section>
+        <div class="columns small-4">
+            <button class="show-for-small-only hamburger hamburger--squeeze" type="button">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+            </button>
         </div>
     </div>
+    <div class="js-mobile-nav show-for-small-only slidy-nav">
+        {{> header_nav classes="hide"}}
+    </div>
+    <div class="show-for-medium-up">{{> header_nav}}</div>
+    <div class="header-bottom-bar show-for-small-only"></div>
 </header>

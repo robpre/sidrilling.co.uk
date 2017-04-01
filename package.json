@@ -47,6 +47,7 @@
   "devDependencies": {
     "body-parser": "^1.17.1",
     "cheerio": "^0.22.0",
+    "decache": "^4.1.0",
     "express": "^4.15.2",
     "gaze": "^1.1.2",
     "reload": "^1.1.1"

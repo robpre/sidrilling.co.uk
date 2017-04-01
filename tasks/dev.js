@@ -5,30 +5,44 @@ const gaze = require('gaze');
 const nodePath = require('path');
 const bodyParser = require('body-parser');
 const cheerio = require('cheerio');
+const decache = require('decache');
 
 const app = express();
+const server = http.createServer(app);
+const reloadServer = reload(server, app, true);
 
 app.use(bodyParser.json());
-const static = express.static(nodePath.resolve(__dirname, '..', 'build'));
-app.use('/', static);
+app.use(express.static(nodePath.resolve(__dirname, '..', 'build'), {fallthrough: false}));
+app.use(function(err, req, res, next) {
+    if (err) {
+        res.set('Content-Type', 'text/html; charset=utf-8')
+            .send(`
+                <script src="/reload/reload.js"></script>
+                <pre style="font-size: 5rem;">
+                    ${err.message}
+                    ${err.stack}
+                </pre>
+            `);
+        return;
+    }
+    next();
+});
 
-const server = http.createServer(app);
-
-const reloadServer = reload(server, app, true);
 
 server.listen(8080, () => console.log('Listening on :8080'));
 
 const globs = [
-    '**/*.*'
+    '**/*.*',
+    'metalsmith.js'
 ];
 const cwd = nodePath.resolve(__dirname, '..', 'app');
-const appPath = require.resolve('../');
 
 function build(cb) {
-    delete require.cache[appPath];
-    require(appPath).use(ms => {
+
+    decache('../');
+    require('../').use(ms => {
         Object.keys(ms).forEach(k => {
-            if (k.indexOf(/\.html$/) !== -1) {
+            if (k.match(/\.html?$/)) {
                 const $ = cheerio.load(ms[k].contents.toString());
 
                 $('body').append('<script src="/reload/reload.js"></script>');

@@ -1,0 +1,55 @@
+/**
+ * #165F32
+ * #9DBE38
+ * #E5EEC8
+ *
+ * color: #3A3A3A;
+ * grid columns padding: 0.9375rem;
+ */
+
+/* ========================================= Layout */
+@font-face {
+    font-family: 'Biryani';
+    src: url('./fonts/Biryani-ExtraBold.ttf') format('truetype');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'Biryani';
+    src: url('./fonts/Biryani-Regular.ttf') format('truetype');
+    font-weight: normal;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h1, h2, h3, h4, h5, h6,
+body,
+button,
+input,
+select,
+textarea {
+    font-family: Biryani, sans-serif;
+    font-weight: normal;
+}
+
+h1 span,
+h2 span,
+h3 span,
+h4 span,
+h5 span,
+h6 span {
+    font-size: 0.5em;
+    display: block;
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-size: .75em;
+    color: #3A3A3A;
+}

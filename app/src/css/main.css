@@ -1,0 +1,133 @@
+header,
+main,
+footer {
+    position: relative;
+}
+
+header {z-index: 3;}
+main {z-index: 2;}
+footer {z-index: 3;}
+
+header {
+    padding: .5em 0 0;
+    background-color: #fff;
+    background: #165F32;
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+header a {
+    color: #fff;
+}
+
+header a:hover {
+    color: #9DBE38;
+}
+
+header a:active,
+header nav a.active {
+    border-bottom: #E5EEC8 2px solid;
+}
+
+button:hover,
+button:active {
+    background-color: #9DBE38;
+}
+
+.logo {
+    font-weight: bold;
+    background-repeat: no-repeat;
+    background-image: url("images/logo.png");
+    background-position: center;
+    background-size: contain;
+    text-align: center;
+    padding: 1.5rem 0;
+    margin: 0;
+}
+
+.logo a {
+    text-shadow: 0 3px 0px #000;
+}
+
+.quick-contact {
+    margin-top: 1rem;
+}
+
+header nav,
+.header-bottom-bar {
+    background-color: #E5EEC8;
+}
+
+.slidy-nav nav,
+.header-bottom-bar {
+    padding-top: 1rem;
+}
+
+header ul {
+    margin: 0;
+    list-style: none;
+}
+
+header nav a {
+    color: #3A3A3A;
+}
+
+header nav {
+    padding: .5rem;
+}
+
+header .hamburger {
+    margin: 0;
+    float: right;
+}
+
+nav li {
+    display: inline-block;
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 0 0.5rem;
+}
+
+.move-offscreen {
+    left: -100%;
+    position: fixed;
+}
+
+.quick-contact ul {
+    list-style: none;
+}
+
+main {
+    width:100%;
+    min-height: 100%;
+    min-height: 100vh;
+}
+
+
+main .content {
+    background: #fff;
+    margin: 0.9375rem 0;
+}
+
+.overlay {
+    position: fixed;
+    z-index: 9999;
+    width: 100%;
+    background: rgba(255, 255, 255, .5);
+}
+
+footer {
+
+}
+
+.copy-bar {
+    background-color: #E5EEC8;
+    font-size: 0.9em;
+}
+
+.copyrights {
+    text-align: center;
+    margin: 0;
+    padding: .5em 0;
+}

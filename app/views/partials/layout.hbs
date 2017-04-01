@@ -7,10 +7,11 @@
             <div class="scrollable content row">
                 <div class="columns">
                     {{> @partial-block}}
-                    {{{devPre this}}}
+                    <script>window.thing = `{{devPre this}}`.replace('&quot;', '"')</script>
                 </div>
             </div>
         </main>
         {{> footer}}
+        <script type="text/javascript" src="/js/script.js"></script>
     </body>
 </html>

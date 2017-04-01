@@ -34,7 +34,9 @@ module.exports = Metalsmith(__dirname + '/app')
     }))
     .use(postcss({
         plugins: {
-            'postcss-import': {},
+            'postcss-import': {
+                path: __dirname + '/app'
+            },
             'autoprefixer': {},
             'cssnano': {}
         },
