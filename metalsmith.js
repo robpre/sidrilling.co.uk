@@ -13,8 +13,9 @@ const addCss = require('./app/plugins/addCss');
 module.exports = Metalsmith(__dirname + '/app')
     .metadata({
         sitename: 'S I Drilling',
-        siteurl: 'http://example.com/',
-        description: ''
+        siteurl: 'https://sidrilling.co.uk/',
+        description: '',
+        trackingCode: process.env.TRACKING_CODE || 'UA-96594891-1'
     })
     .source('./data')
     .destination('../build')

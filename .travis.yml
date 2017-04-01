@@ -14,6 +14,9 @@ script:
   - if [ "$TRAVIS_BRANCH" == "develop" ]; then
       npm run deploy-drafts;
     fi
+  - if [ "$TRAVIS_BRANCH" == "master" ]; then
+      TRACKING_CODE="UA-96594891-2" npm run deploy-drafts;
+    fi
 branches:
   only:
     - develop
