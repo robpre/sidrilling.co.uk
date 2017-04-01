@@ -1,5 +1,5 @@
 {
-    "extends": "../../.eslintrc.json",
+    "extends": "../../../.eslintrc.json",
     "env": {
         "commonjs": true,
         "browser": true
