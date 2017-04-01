@@ -6,13 +6,13 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint .",
-    "start": "node tasks/dev.j",
+    "start": "node tasks/dev.js",
     "build": "node metalsmith.js",
     "deploy-drafts": "TARGET_ENV=drafts node ./tasks/deploy.js",
     "deploy-locally": "node -r dotenv/config ./tasks/deploy.js"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Robert Preus-MacLaren",
+  "license": "GNUv3",
   "dependencies": {
     "autoprefixer": "^6.7.7",
     "browserify": "^14.1.0",
@@ -46,6 +46,7 @@
   },
   "devDependencies": {
     "body-parser": "^1.17.1",
+    "cheerio": "^0.22.0",
     "express": "^4.15.2",
     "gaze": "^1.1.2",
     "reload": "^1.1.1"

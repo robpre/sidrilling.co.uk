@@ -8,20 +8,20 @@ const browserify = require('metalsmith-browserify');
 const postcss = require('metalsmith-postcss');
 const findHelpers = require('metalsmith-discover-helpers');
 
-const addCss = require('./plugins/addCss');
+const addCss = require('./app/plugins/addCss');
 
-module.exports = Metalsmith(__dirname)
+module.exports = Metalsmith(__dirname + '/app')
     .metadata({
         sitename: 'S I Drilling',
         siteurl: 'http://example.com/',
         description: ''
     })
     .source('./data')
-    .destination('./build')
+    .destination('../build')
     .clean(true)
     .use(browserify({
         dest: 'js/script.js',
-        entries: ['./src/js/main.js'],
+        entries: ['./app/src/js/main.js'],
         sourcemaps: process.env.NODE_ENV === 'development'
     }))
     .use(assets({
@@ -42,9 +42,6 @@ module.exports = Metalsmith(__dirname)
             inline: false
         }
     }))
-    .use((...args) => {
-        debugger;
-    })
     .use(collections({
         jobs: 'jobs/*.md',
         equipment: 'equipment/*.md'
@@ -63,7 +60,9 @@ module.exports = Metalsmith(__dirname)
 
 if (!module.parent) {
     module.exports.build(function(err) { // build process
-        if (err) throw err; // error handling is required
+        if (err) {
+            throw err; // error handling is required
+        }
 
         console.log('built!');
     });
