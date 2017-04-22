@@ -33,7 +33,7 @@ server.listen(8080, () => console.log('Listening on :8080'));
 
 const globs = [
     '**/*.*',
-    'metalsmith.js'
+    '../metalsmith.js'
 ];
 const cwd = nodePath.resolve(__dirname, '..', 'app');
 
@@ -62,7 +62,7 @@ gaze(globs, { cwd }, (err, watcher) => {
     if (err) {
         throw err;
     }
-
+    let building = 0;
     const watched = watcher.watched();
 
     console.log(`Watching files in ${Object.keys(watched).map(f => f.replace(cwd + '/', '')).join(',')}`);
@@ -70,12 +70,16 @@ gaze(globs, { cwd }, (err, watcher) => {
     watcher.on('all', function(event, filepath) {
         console.log(filepath + ' changed');
 
+        building++;
         build(err => {
             if (err) {
                 console.error('error during build', err);
             }
 
-            reloadServer.reload();
+            if (--building <= 0) {
+                building = 0;
+                reloadServer.reload();
+            }
         });
     });
 });

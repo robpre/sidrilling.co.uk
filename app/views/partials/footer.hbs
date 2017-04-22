@@ -1,7 +1,31 @@
 <footer>
     <div class="row copy-bar">
-        <p class="columns large-centered copyrights">
-            &copy; 2016 SI Drilling Ltd
-        </p>
+        <div class="columns small-12">
+            <div class="row">
+                <div class="columns medium-4">
+                    {{> quick_contact partialTitle="Contact Us" }}
+                </div>
+                <div class="columns medium-4">
+                    <a href="/privacy-policy">Privacy Policy</a>
+                </div>
+                <div class="columns medium-4">
+                </div>
+            </div>
+        </div>
+        <div class="columns small-12">
+            <p class="large-centered copyrights">
+                &copy; 2016 SI Drilling Ltd
+            </p>
+        </div>
     </div>
 </footer>
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', '{{trackingCode}}', 'auto');
+    ga('send', 'pageview');
+</script>
+<script type="text/javascript" src="/js/script.js"></script>

@@ -44,10 +44,16 @@ button:active {
     text-align: center;
     padding: 1.5rem 0;
     margin: 0;
+    font-size: 2rem;
 }
 
 .logo a {
     text-shadow: 0 3px 0px #000;
+}
+
+.logo span {
+    font-size: 0.5em;
+    display: block;
 }
 
 .quick-contact {
@@ -86,6 +92,10 @@ header .hamburger {
     float: right;
 }
 
+.logo-quick-contact {
+    padding: .5em 0;
+}
+
 nav li {
     display: inline-block;
     text-align: center;
@@ -100,6 +110,7 @@ nav li {
 
 .quick-contact ul {
     list-style: none;
+    margin: 0;
 }
 
 main {

@@ -4,6 +4,7 @@
 @import "hamburgers/dist/hamburgers.css";
 @import "src/css/fonts.css";
 @import "src/css/main.css";
+@import "src/css/layout.css";
 
 /* ========================================= Home */
 .splash {

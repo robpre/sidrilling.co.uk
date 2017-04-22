@@ -1,3 +1,3 @@
-- [mailto://sales@sidrilling.co.uk](sales@sidrilling.co.uk)
-- [mailto://01603720271](01603 720271)
-- [mailto://07785313447](07785 313447)
+- [sales@sidrilling.co.uk](mailto://sales@sidrilling.co.uk)
+- [01603720271](tel://01603 720271)
+- [07785313447](tel://07785 313447)

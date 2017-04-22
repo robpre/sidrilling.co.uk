@@ -51,4 +51,4 @@ function deactivate () {
     $ham.removeClass('is-active');
 }
 
-
+$('body').on('click tap', 'main', deactivate);

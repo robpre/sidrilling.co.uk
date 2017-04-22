@@ -10,7 +10,7 @@ const findHelpers = require('metalsmith-discover-helpers');
 
 const addCss = require('./app/plugins/addCss');
 
-module.exports = Metalsmith(__dirname + '/app')
+const sidrilling = Metalsmith(__dirname + '/app')
     .metadata({
         sitename: 'S I Drilling',
         siteurl: 'https://sidrilling.co.uk/',
@@ -54,7 +54,9 @@ module.exports = Metalsmith(__dirname + '/app')
     .use(permalinks({
         relative: false
     }))
-    .use(findHelpers())
+    .use(findHelpers({
+        'directory': 'helpers'
+    }))
     .use(layouts({
         engine: 'handlebars',
         partials: './views/partials',
@@ -62,8 +64,10 @@ module.exports = Metalsmith(__dirname + '/app')
         partialExtension: '.hbs'
     }));
 
+module.exports = sidrilling;
+
 if (!module.parent) {
-    module.exports.build(function(err) { // build process
+    sidrilling.build(function(err) { // build process
         if (err) {
             throw err; // error handling is required
         }

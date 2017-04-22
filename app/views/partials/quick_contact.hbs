@@ -1,7 +1,6 @@
 <section class="quick-contact">
-    <ul>
-        <li><a href="mailto://sales@sidrilling.co.uk">sales@sidrilling.co.uk</a></li>
-        <li><a href="tel://01603720271">01603 720271</a></li>
-        <li><a href="tel://07785313447">07785 313447</a></li>
-    </ul>
+    {{#if partialTitle}}
+        <p>{{partialTitle}}</p>
+    {{/if}}
+    {{{renderBlock 'quick-contact'}}}
 </section>
