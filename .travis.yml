@@ -15,6 +15,7 @@ script:
       npm run deploy-drafts;
     fi
   - if [ "$TRAVIS_BRANCH" == "master" ]; then
+      export NODE_ENV=production
       TRACKING_CODE="UA-96594891-2" npm run deploy-drafts;
     fi
 branches:

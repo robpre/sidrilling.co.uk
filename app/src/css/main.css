@@ -77,6 +77,10 @@ header nav {
     padding: .5rem;
 }
 
+.slidy-nav nav {
+    padding-bottom: 0;
+}
+
 header .hamburger {
     margin: 0;
     float: right;

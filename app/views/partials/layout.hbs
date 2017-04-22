@@ -7,7 +7,7 @@
             <div class="scrollable content row">
                 <div class="columns">
                     {{> @partial-block}}
-                    <script>window.thing = `{{devPre this}}`.replace('&quot;', '"')</script>
+                    <script>window.thing = `{{devPre this.collections}}`.replace(/\&quot;/g, '"')</script>
                 </div>
             </div>
         </main>

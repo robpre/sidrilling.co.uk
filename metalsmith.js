@@ -47,7 +47,8 @@ module.exports = Metalsmith(__dirname + '/app')
     }))
     .use(collections({
         jobs: 'jobs/*.md',
-        equipment: 'equipment/*.md'
+        equipment: 'equipment/*.md',
+        blocks: 'blocks/*.md'
     }))
     .use(markdown())
     .use(permalinks({

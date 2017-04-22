@@ -42,9 +42,13 @@ $(window).on('resize', debounce(repadContent));
 
 // probably not needed anymore
 $(window).on('scroll', debounce(function() {
-    $mobileNav.hide();
-    $ham.removeClass('is-active');
+    deactivate();
     repadContent();
 }));
+
+function deactivate () {
+    $mobileNav.slideUp();
+    $ham.removeClass('is-active');
+}
 
 
