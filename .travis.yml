@@ -9,13 +9,13 @@ notifications:
       - rpprroger@gmail.com
 before_script:
   - npm run lint
-  - npm run build
 script:
+  - export NODE_ENV=production
+  - npm run build
   - if [ "$TRAVIS_BRANCH" == "develop" ]; then
       npm run deploy-drafts;
     fi
   - if [ "$TRAVIS_BRANCH" == "master" ]; then
-      export NODE_ENV=production
       TRACKING_CODE="UA-96594891-2" npm run deploy-drafts;
     fi
 branches:
