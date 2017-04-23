@@ -5,5 +5,4 @@ require('request-frame')('native');
 require('classlist-polyfill');
 
 require('./layout.js');
-
-window.$ = window.jQuery = require('jquery');
+require('./foundation.js');

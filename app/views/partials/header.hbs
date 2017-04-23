@@ -12,12 +12,14 @@
                         </div>
                     </div>
                     <div class="columns small-12 medium-9">
-                        <div class="show-for-medium-up row">
-                            <div class="columns medium-4">
-                                {{> quick_contact}}
-                            </div>
-                            <div class="columns medium-8">
-                                {{> creds}}
+                        <div class="contact-and-creds">
+                            <div class="show-for-medium row">
+                                <div class="columns medium-4">
+                                    {{> quick_contact}}
+                                </div>
+                                <div class="columns medium-8">
+                                    {{> creds}}
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -35,6 +37,6 @@
     <div class="js-mobile-nav show-for-small-only slidy-nav">
         {{> header_nav classes="hide"}}
     </div>
-    <div class="show-for-medium-up">{{> header_nav}}</div>
+    <div class="show-for-medium">{{> header_nav}}</div>
     <div class="header-bottom-bar show-for-small-only"></div>
 </header>

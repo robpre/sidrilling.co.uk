@@ -1,21 +1,24 @@
 <footer>
     <div class="row copy-bar">
         <div class="columns small-12">
-            <div class="row">
-                <div class="columns medium-4">
+            <div class="row" data-equalizer>
+                <div class="columns medium-4" data-equalizer-watch>
                     {{> quick_contact partialTitle="Contact Us" }}
                 </div>
-                <div class="columns medium-4">
-                    <a href="/privacy-policy">Privacy Policy</a>
+                <div class="columns medium-4" data-equalizer-watch>
+                    <div class="privacy-and-social">
+                        <a href="/privacy-policy">Privacy Policy</a>
+                    </div>
+                    <p class="large-centered copyrights">
+                        &copy; 2016 SI Drilling Ltd
+                    </p>
                 </div>
-                <div class="columns medium-4">
+                <div class="columns medium-4" data-equalizer-watch>
+                    <div>
+                        {{> creds}}
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="columns small-12">
-            <p class="large-centered copyrights">
-                &copy; 2016 SI Drilling Ltd
-            </p>
         </div>
     </div>
 </footer>

@@ -1,6 +1,6 @@
 /** css-import only picks up double quotes for imports */
-@import "foundation-sandboxed/build/css/normalize.css";
-@import "foundation-sandboxed/build/css/foundation.css";
+@import "normalize.css";
+@import "foundation-sites/dist/css/foundation.css";
 @import "hamburgers/dist/hamburgers.css";
 @import "src/css/fonts.css";
 @import "src/css/main.css";

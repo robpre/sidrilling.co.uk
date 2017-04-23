@@ -22,17 +22,16 @@ header a {
 }
 
 header a:hover {
-    color: #9DBE38;
-}
-
-header a:active,
-header nav a.active {
-    border-bottom: #E5EEC8 2px solid;
+    color: #439eee;
 }
 
 button:hover,
 button:active {
-    background-color: #9DBE38;
+    background-color: #439eee;
+}
+
+header .contact-and-creds {
+    margin-top: 1.5rem; /* logo top padding */
 }
 
 .logo {
@@ -48,16 +47,12 @@ button:active {
 }
 
 .logo a {
-    text-shadow: 0 3px 0px #000;
+    text-shadow: 0 3px 10px #000;
 }
 
 .logo span {
     font-size: 0.5em;
     display: block;
-}
-
-.quick-contact {
-    margin-top: 1rem;
 }
 
 header nav,
@@ -96,6 +91,10 @@ header .hamburger {
     padding: .5em 0;
 }
 
+nav a {
+    text-transform: capitalize;
+}
+
 nav li {
     display: inline-block;
     text-align: center;
@@ -132,17 +131,17 @@ main .content {
     background: rgba(255, 255, 255, .5);
 }
 
-footer {
-
-}
-
 .copy-bar {
+    font-size: 1rem;
     background-color: #E5EEC8;
-    font-size: 0.9em;
 }
 
 .copyrights {
     text-align: center;
     margin: 0;
-    padding: .5em 0;
+    padding: 0 0 .5em;
+}
+
+.privacy-and-social {
+    text-align: center;
 }

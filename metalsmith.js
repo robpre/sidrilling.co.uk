@@ -7,8 +7,9 @@ const assets = require('metalsmith-assets');
 const browserify = require('metalsmith-browserify');
 const postcss = require('metalsmith-postcss');
 const findHelpers = require('metalsmith-discover-helpers');
+const externalLinks = require('metalsmith-external-links');
 
-const addCss = require('./app/plugins/addCss');
+const copyFile = require('./app/plugins/copyFile');
 
 const sidrilling = Metalsmith(__dirname + '/app')
     .metadata({
@@ -23,13 +24,13 @@ const sidrilling = Metalsmith(__dirname + '/app')
     .use(browserify({
         dest: 'js/script.js',
         entries: ['./app/src/js/main.js'],
-        sourcemaps: process.env.NODE_ENV === 'development'
+        sourcemaps: process.env.NODE_ENV !== 'production'
     }))
     .use(assets({
         origin: './public/',
         destination: './'
     }))
-    .use(addCss({
+    .use(copyFile({
         origin: './src/css/styles.css',
         destination: 'css/styles.css'
     }))
@@ -62,6 +63,9 @@ const sidrilling = Metalsmith(__dirname + '/app')
         partials: './views/partials',
         directory: './views/layouts',
         partialExtension: '.hbs'
+    }))
+    .use(externalLinks({
+        domain: 'sidrilling.co.uk'
     }));
 
 module.exports = sidrilling;
