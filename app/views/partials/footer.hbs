@@ -3,19 +3,29 @@
         <div class="columns small-12">
             <div class="row" data-equalizer>
                 <div class="columns medium-4" data-equalizer-watch>
-                    {{> quick_contact partialTitle="Contact Us" }}
-                </div>
-                <div class="columns medium-4" data-equalizer-watch>
-                    <div class="privacy-and-social">
-                        <a href="/privacy-policy">Privacy Policy</a>
+                    <div class="column-offset">
+                        {{> quick_contact partialTitle="Contact Us" }}
                     </div>
-                    <p class="large-centered copyrights">
-                        &copy; 2016 SI Drilling Ltd
-                    </p>
                 </div>
-                <div class="columns medium-4" data-equalizer-watch>
-                    <div>
-                        {{> creds}}
+                <div class="columns medium-4 medium-push-4" data-equalizer-watch>
+                    <div class="column-offset">
+                        <div class="row expanded">
+                            <div class="columns">
+                                {{> creds}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="columns medium-4 medium-pull-4" data-equalizer-watch>
+                    <div class="column-offset">
+                        <div class="privacy-and-copy-right">
+                            <div class="privacy-and-social">
+                                <a href="/privacy-policy">Privacy Policy</a>
+                                <p class="copyrights">
+                                    &copy; 2016 SI Drilling Ltd
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -31,4 +41,4 @@
     ga('create', '{{trackingCode}}', 'auto');
     ga('send', 'pageview');
 </script>
-<script type="text/javascript" src="/js/script.js"></script>
+<script type="text/javascript" src="/js/common.js"></script>

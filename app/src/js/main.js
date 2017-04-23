@@ -4,5 +4,5 @@ require('./shims/Function.prototype.bind.js');
 require('request-frame')('native');
 require('classlist-polyfill');
 
-require('./layout.js');
 require('./foundation.js');
+require('./layout.js');

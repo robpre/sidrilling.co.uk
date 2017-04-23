@@ -4,10 +4,10 @@
     <body>
         {{> header}}
         <main class="main-layout">
-            <div class="scrollable content row">
+            <div class="row">
                 <div class="columns">
                     {{> @partial-block}}
-                    <script>window.thing = `{{dev this.collections}}`.replace(/\&quot;/g, '"')</script>
+                    <script>window.thing = `{{dev this}}`.replace(/\&quot;/g, '"')</script>
                 </div>
             </div>
         </main>

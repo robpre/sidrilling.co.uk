@@ -32,6 +32,7 @@ button:active {
 
 header .contact-and-creds {
     margin-top: 1.5rem; /* logo top padding */
+    font-size: 1rem;
 }
 
 .logo {
@@ -118,12 +119,6 @@ main {
     min-height: 100vh;
 }
 
-
-main .content {
-    background: #fff;
-    margin: 0.9375rem 0;
-}
-
 .overlay {
     position: fixed;
     z-index: 9999;
@@ -142,6 +137,28 @@ main .content {
     padding: 0 0 .5em;
 }
 
-.privacy-and-social {
+footer .privacy-and-copy-right {
+    display: table;
+    width: 100%;
+    height: 100%;
+}
+
+footer .privacy-and-social {
+    display: table-cell;
     text-align: center;
+    vertical-align: bottom;
+}
+
+footer .quick-contact p span {
+    border-bottom: 1px solid #3A3A3A;
+}
+
+.creditations img {
+    width: 100%;
+}
+
+footer .column-offset {
+    padding: 1rem 0;
+    width: 100%;
+    height: 100%;
 }

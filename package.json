@@ -8,7 +8,8 @@
     "lint": "eslint .",
     "start": "node tasks/dev.js",
     "build": "node metalsmith.js",
-    "postbuild": "uglifyjs build/js/script.js --compress --mangle -o build/js/script.js",
+    "uglify": "uglifyjs $0 --compress --mangle -o $0",
+    "postbuild": "npm run uglify -- build/js/common.js",
     "deploy-drafts": "TARGET_ENV=drafts node ./tasks/deploy.js",
     "deploy-locally": "node -r dotenv/config ./tasks/deploy.js"
   },
@@ -27,6 +28,7 @@
     "debounce": "^1.0.0",
     "dotenv": "^4.0.0",
     "eslint": "^3.18.0",
+    "factor-bundle": "^2.5.0",
     "foundation-sites": "^6.3.1",
     "ftp": "^0.3.10",
     "ftp-deploy": "^1.1.0",

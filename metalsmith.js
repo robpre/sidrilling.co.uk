@@ -11,6 +11,16 @@ const externalLinks = require('metalsmith-external-links');
 
 const copyFile = require('./app/plugins/copyFile');
 
+const entryFiles = ['./app/src/js/main.js'];
+var curryPlugin;
+// curryPlugin = (factorBundle => (b, opts) => {
+//     const options = Object.assign({}, opts, {
+//         outputs: ['build/js/script.js']
+//     });
+
+//     return factorBundle(b, options);
+// })(require('factor-bundle'));
+
 const sidrilling = Metalsmith(__dirname + '/app')
     .metadata({
         sitename: 'S I Drilling',
@@ -22,9 +32,10 @@ const sidrilling = Metalsmith(__dirname + '/app')
     .destination('../build')
     .clean(true)
     .use(browserify({
-        dest: 'js/script.js',
-        entries: ['./app/src/js/main.js'],
-        sourcemaps: process.env.NODE_ENV !== 'production'
+        dest: 'js/common.js',
+        entries: entryFiles,
+        sourcemaps: process.env.NODE_ENV !== 'production',
+        plugin: [curryPlugin]
     }))
     .use(assets({
         origin: './public/',
