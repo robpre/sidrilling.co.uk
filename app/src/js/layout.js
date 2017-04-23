@@ -16,7 +16,7 @@ function actionOnHamburger() {
     }
 }
 
-function repadContent() {
+var repadContent = debounce(function repadContent() {
     var top = $head.outerHeight();
     var tail = $tail.outerHeight();
     $main.css({
@@ -27,7 +27,7 @@ function repadContent() {
     $main.find('.splash').css({
         'margin-top': -top
     });
-}
+});
 
 repadContent();
 
@@ -38,7 +38,9 @@ $ham.on('click', function() {
     actionOnHamburger();
 });
 
-$(window).on('resize', debounce(repadContent));
+$(window).on('resize', repadContent);
+$('footer').on('postequalized.zf.equalizer', repadContent);
+$('header').on('load', 'img', repadContent);
 
 // probably not needed anymore
 $(window).on('scroll', debounce(function() {

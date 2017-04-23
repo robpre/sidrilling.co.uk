@@ -1,0 +1,11 @@
+{{#> layout }}
+    <figure class="image">
+        <div class="lazy-blur">
+            <div style="padding-bottom: ${imgRatio}"><!-- lazy-blur__imgS__placeholder --></div>
+            <img src="${imgS.url}" data-src="/css/images/big_sand_hand.jpg" class="lazy-blur__imgS"/>
+            <noscript><img src="${imgL.url}"/></noscript>
+        </div>
+        <figcaption>{{{renderBlock 'home-blurb'}}}</figcaption>
+    </figure>
+    {{{contents}}}
+{{/layout}}
