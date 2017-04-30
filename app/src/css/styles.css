@@ -5,14 +5,29 @@
 @import "src/css/fonts.css";
 @import "src/css/main.css";
 @import "src/css/layout.css";
+@import "src/css/lazy_load.css";
 
 /* ========================================= Home */
-.splash {
-    height: 75%;
-    height: 75vh;
-    background-image: url("images/big_sand_hand.jpg");
-    background-size: cover;
-    background-position: 50%;
+.home-splash {
+    height: 50vh;
+}
+
+.home-splash figure {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.home-splash figcaption {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.home-splash .caption-text {
+    text-align: center;
+    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.5);
 }
 
 /* ========================================= Projects */

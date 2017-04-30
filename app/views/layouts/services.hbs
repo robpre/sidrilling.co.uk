@@ -1,11 +1,15 @@
 {{#> layout }}
-    <div>
-        {{{contents}}}
+    <div class="row">
+        <div class="columns">
+            <div>
+                {{{contents}}}
+            </div>
+
+            <ul>
+                {{#each equipment}}
+
+                {{/each}}
+            </ul>
+        </div>
     </div>
-
-    <ul>
-        {{#each equipment}}
-
-        {{/each}}
-    </ul>
 {{/layout}}
