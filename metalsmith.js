@@ -8,8 +8,10 @@ const browserify = require('metalsmith-browserify');
 const postcss = require('metalsmith-postcss');
 const findHelpers = require('metalsmith-discover-helpers');
 const externalLinks = require('metalsmith-external-links');
+const metaList = require('metalsmith-metadata-as-list');
 
 const copyFile = require('./app/plugins/copyFile');
+const wrapHeadings = require('./app/plugins/wrapHeadings');
 
 const entryFiles = ['./app/src/js/main.js'];
 var curryPlugin;
@@ -57,12 +59,14 @@ const sidrilling = Metalsmith(__dirname + '/app')
             inline: false
         }
     }))
+    .use(metaList({handle: 'equipment'}))
     .use(collections({
         jobs: 'jobs/*.md',
         equipment: 'equipment/*.md',
         blocks: 'blocks/*.md'
     }))
     .use(markdown())
+    .use(wrapHeadings)
     .use(permalinks({
         relative: false
     }))

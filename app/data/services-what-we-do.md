@@ -1,6 +1,6 @@
 ---
 title: What We Do
-layout: layout.hbs
+layout: what-we-do.hbs
 ---
 # What we Do
 

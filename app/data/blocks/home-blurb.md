@@ -1,13 +1,12 @@
 ---
 blockName: home-page-blurb
 ---
-S I DILLING CABLE PERCUSSION LTD
+# SI Drilling cable percussion ltd.
 
-BOREHOLE SPECIALISTS IN CABLE PERCUSSION DRILLING
+Borehole specialists in cable percussion drilling
 
-WE PROVIDE CONSISTANT PROFESSIONAL EXPERTISE AND EXPERIENCE FOR YOUR EXACT SITE INVESTIGATION PROJECTS
+We provide consistent professional expertise and experience for your exact site investigation projects
 
-We offer a reliable site specific service
-Excellent work ethic and attention to detail,
-as well as
-Cost effective results.
+- We offer a reliable site specific service
+- Excellent work ethic and attention to detail
+- As well as cost effective results

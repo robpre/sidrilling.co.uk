@@ -1,0 +1,12 @@
+{{#> layout }}
+    <div class="row">
+        <div class="columns">
+            {{{contents}}}
+        </div>
+        <div class="columns">
+            {{#each equipment}}
+                {{> media_object this nestedObject=(findByEquipment title @root.jobs) nestedObjectIntro="Jobs that use this equipment:"}}
+            {{/each}}
+        </div>
+    </div>
+{{/layout}}

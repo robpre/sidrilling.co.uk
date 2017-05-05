@@ -27,10 +27,41 @@
 .home-splash .caption-text {
     text-align: center;
     background-color: #fff;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.75);
     padding: .5rem;
 }
 
-/* ========================================= Projects */
+.home-splash .caption-text ul {
+    margin: 0;
+    margin-top: 1rem;
+    list-style: none;
+}
+
+.home-splash .caption-text h1 {
+    font-size: 1.5rem;
+    text-transform: capitalize;
+}
+
+.layout-file-home .main-wrapper {
+    padding-top: 0;
+}
+
+/* ========================================= What We Do */
+.layout-file-what-we-do h2 {
+    padding-left: 1rem;
+}
+
+.layout-file-what-we-do h1 {
+    background-image: url('images/gb_geo.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 7rem 0 1rem;
+}
+
+.layout-file-what-we-do h1 span {
+    background: #fff;
+    padding: 0 1rem;
+}
+
 /* ========================================= Capabilities */
 /* ========================================= Contact */

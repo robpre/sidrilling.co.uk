@@ -1,0 +1,16 @@
+<figure class="media-object">
+    <div class="media-object-section">
+        <div class="thumbnail">
+            <img alt="image of {{title}}" src="/content-images/{{image}}">
+        </div>
+    </div>
+    <div class="media-object-section">
+        <h4>{{title}}</h4>
+        <figcaption>{{{contents}}}</figcaption>
+
+        {{#each nestedObject}}
+            <h5>{{nestedObjectIntro}}</h5>
+            {{>media-object nestedObject}}
+        {{/each}}
+    </div>
+</figure>

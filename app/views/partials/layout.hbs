@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html>
     {{> head}}
-    <body>
+    <body class="layout-file-{{slugHBS layout}}">
         {{> header}}
         <main class="main-layout">
-            {{> @partial-block}}
+            <div class="main-wrapper">
+                {{> @partial-block}}
+            </div>
         </main>
         {{> footer}}
     </body>

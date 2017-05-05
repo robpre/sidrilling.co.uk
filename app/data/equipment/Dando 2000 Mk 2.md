@@ -1,7 +1,6 @@
 ---
-layout: equipment.hbs
 title: Dando 2000 Mk 2
-image: dando2000.png
+image: dando2000.jpg
 ---
 
 We have six rigs of this type
