@@ -21,12 +21,14 @@
     position: absolute;
     bottom: 0;
     width: 100%;
+    padding: 1rem;
 }
 
 .home-splash .caption-text {
     text-align: center;
     background-color: #fff;
     background-color: rgba(255, 255, 255, 0.5);
+    padding: .5rem;
 }
 
 /* ========================================= Projects */

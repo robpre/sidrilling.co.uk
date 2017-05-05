@@ -3,6 +3,7 @@ title: Privacy Policy
 layout: layout.hbs
 ---
 # Privacy Policy of www.sidrilling.co.uk
+
 This Application collects some Personal Data from its Users.
 ## Data Controller and Owner
 SI Drilling Cable Percussion Ltd. 9 Vera Road, Norwich NR13 6QP
