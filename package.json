@@ -7,6 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint .",
     "start": "node tasks/dev.js",
+    "debug": "node --debug --inspect tasks/dev.js",
     "build": "node metalsmith.js",
     "postbuild": "./tasks/uglify build/js/common.js",
     "deploy-drafts": "TARGET_ENV=drafts node ./tasks/deploy.js",

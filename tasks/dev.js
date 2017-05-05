@@ -5,7 +5,6 @@ const gaze = require('gaze');
 const nodePath = require('path');
 const bodyParser = require('body-parser');
 const cheerio = require('cheerio');
-const decache = require('decache');
 
 const app = express();
 const server = http.createServer(app);
@@ -37,10 +36,20 @@ const globs = [
 ];
 const cwd = nodePath.resolve(__dirname, '..', 'app');
 
-function build(cb) {
+const clearCache = () => {
+    for (const key of Object.keys(require.cache)) delete require.cache[key];
+};
 
-    decache('../');
-    require('../').use(ms => {
+function build(cb) {
+    clearCache();
+    var metal;
+
+    try {
+        metal = require('../');
+    } catch (e) {
+        return cb(e);
+    }
+    metal.use(ms => {
         Object.keys(ms).forEach(k => {
             if (k.match(/\.html?$/)) {
                 const $ = cheerio.load(ms[k].contents.toString());
@@ -72,11 +81,14 @@ gaze(globs, { cwd }, (err, watcher) => {
 
         building++;
         build(err => {
+            --building;
+
             if (err) {
-                console.error('error during build', err);
+                console.error('error during build, waiting for reload');
+                return console.error(err);
             }
 
-            if (--building <= 0) {
+            if (building <= 0) {
                 building = 0;
                 reloadServer.reload();
             }
