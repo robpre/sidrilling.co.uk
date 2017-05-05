@@ -9,3 +9,5 @@ This repository is responsible for the data displayed on sidrilling.co.uk
 - ## Changes here will first hit [draft.sidrilling.co.uk](http://draft.sidrilling.co.uk)
 
 - ## [Click here to see the progress of the latest change](https://travis-ci.org/RpprRoger/sidrilling.co.uk)
+
+- ## [Markdown cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
