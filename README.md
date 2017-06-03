@@ -4,6 +4,17 @@ Travis is used to make the site build out, the latest build was: [![Build Status
 
 This repository is responsible for the data displayed on sidrilling.co.uk
 
+## Instructions
+
+- Navigate to the contents which you wish to edit (see below)
+
+- Open the file (the file will usually end in ".md")
+
+- Click the small edit icon 
+
+
+## Resources
+
 - ## [Click here to edit the contents](/app/data)
 
 - ## Changes here will first hit [draft.sidrilling.co.uk](http://draft.sidrilling.co.uk)
