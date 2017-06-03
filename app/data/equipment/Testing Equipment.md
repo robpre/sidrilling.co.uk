@@ -1,14 +1,16 @@
 ---
 title: Testing Equipment
 image: testing.jpg
+draft: true
 ---
 
-We can do these tests
+Down the hole testing can also include: 
 
 - SPT
 - U100
 - UT100
 - D B E
-- Piston
-- Vein
-- Pfizo
+- Piston sampling
+- Plastic stand pipe
+- Stainless steel stand pipe
+- Wire vibrating Piezometer 

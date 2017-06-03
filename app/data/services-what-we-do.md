@@ -6,19 +6,29 @@ layout: what-we-do.hbs
 
 ## Why
 
-Cable percussion drilling or site investigation (SI) drilling is necessary to determine a depth and description of the geological strata in specific locations, on land and (occasionally) on water.
+Cable percussion drilling or site investigation (S I) drilling is necessary to determine a depth and description of the geological strata in specific locations, on land and (occasionally) on water.
 Generally S I Drilling is required for engineering purpose with a myriad of objectives. Essentially these objectives are to obtain soil samples and consequently results from boreholes drilled in the field.
 The results inform our clients of the necessary steps needed to determine foundation solutions in substructure and infrastructure design and development.
 Geotechnical, geoenvironmental, geological and hydrological information that can only come from the ground benefits people, property and the environment.
-Borehole can be drilled to achieve a water well – dad has to say more about this
+Boreholes can also be drilled for water extraction i.e. drinking water and irragation.
 
 ## What
 
-Cable percussion drilling the most common and cost effective method of obtaining soil and water samples for analysis. These samples are taken insitu by the drill team and passed on to the client along with a hand written log which describes the borehole drilled. Wells can be installed for geotechnical and environmental testing and monitoring.
-Standard Cable percussion drilling uses a mobile drilling rig with a two tonne capacity winch towed by a 4x4 vehicle to the borehole position.
-The winch is powered by a diesel engine with an electric or fuel start. The winch pulls the rig to the upright tripod derrick, which in a standard CP rig, is about 7m high.
+Cable percussion drilling is the most common and cost effective method of obtaining soil and water samples for analysis.
+These samples are extracted and can be delivered in different forms, including: 
+- UT100/U100 metal/plastic tubes
+- Small sample bags at 250x375mm 
+- Larger sample bags at 450x600mm
+- Plastic tubs at various sizes
+- Glass jars for environmental uses
+- Plastic or glass bottles for water samples
+
+These are taken insitu by the drill team and passed on to the client along with a hand written log which describes the borehole drilled. Wells can be installed for geotechnical and environmental testing and monitoring.
+Standard Cable percussion drilling uses a mobile drilling rig with a two to three tonne capacity winch towed by a 4x4 vehicle to the borehole position.
+The winch is powered by a diesel/electric powered engine. The rig is erected via an electric winch, the rig stands at approx 6.5m high.
 On projects that have restricted headroom or access limitations the ‘low-headroom’ or ‘de-mountable’ rig can be utilised. These rigs are mobilised to site by on a trailer and Transit van.
-(here could we have quick links to dimensions of different types of rigs?)
+
+[Click here to see our rigs in more detail](/equipment)
 
 ## When
 
@@ -30,7 +40,7 @@ Week end, night work and bank holidays are subject to higher rated charge
 S I Drilling Cable Percussion Ltd are prepared to travel!
 We work UK wide. Past projects we have travelled to Isle of Man, Guernsey and Jersey. We have also worked in Belgium France and Malta.
 S I Drilling Cable Percussion Ltd are based in Norwich Norfolk.
-Mobilisation charges, which is on our Schedule of Rates, includes one string of drill casing transported to site within a 250mile radius of Norwich.
+Mobilisation charges, which is on our Schedule of Rates, includes one string of drill casing transported to site within a 150 mile radius of Norwich.
 
 ## How
 

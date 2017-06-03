@@ -2,7 +2,7 @@
 title: Who We Are
 layout: layout.hbs
 ---
-# WHO WE ARE
+# Who We Are
 
 ## Office team
 The team in the office at headquarters in Norwich provide backup for the team drilling in the field as well as supplying information and support to our clients
