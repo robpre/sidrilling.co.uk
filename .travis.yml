@@ -12,7 +12,7 @@ before_script:
 script:
   - export NODE_ENV=production
   - npm run build
-  - if [ "$TRAVIS_BRANCH" == "master" ]; then
+  - if [ "$TRAVIS_BRANCH" == "develop" ]; then
       export NODE_ENV="development";
     fi
   - if [ "$TRAVIS_BRANCH" == "master" ]; then
