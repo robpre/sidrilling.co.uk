@@ -26,7 +26,7 @@ var curryPlugin;
 const sidrilling = Metalsmith(__dirname + '/app')
     .metadata({
         sitename: 'S I Drilling',
-        siteurl: 'https://sidrilling.co.uk/',
+        siteurl: 'https://www.sidrilling.co.uk/',
         description: '',
         trackingCode: process.env.TRACKING_CODE || 'UA-96594891-1'
     })

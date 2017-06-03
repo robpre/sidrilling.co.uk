@@ -1,10 +1,18 @@
-// const Client = require('ftp');
 const FtpDeploy = require('ftp-deploy');
 const path = require('path');
 const barFactory = require('progress-barjs');
+const fs = require('fs');
 
 const ftpDeploy = new FtpDeploy();
-// const client = new Client();
+const localRoot = path.resolve(__dirname, '..', 'build');
+
+let remoteRoot;
+if (0&&process.env.NODE_ENV === 'production') {
+    remoteRoot = '/public_html/prod/';
+    fs.unlinkSync(path.resolve(localRoot, 'robots.txt'));
+} else {
+    remoteRoot = '/public_html/draft/';
+}
 
 function printError (data) {
     console.error(data.err); // data will also include filename, relativePath, and other goodies
@@ -35,8 +43,8 @@ ftpDeploy.deploy({
     username: process.env.FTP_USERNAME,
     password: process.env.FTP_PASSWORD,
     port: 21,
-    localRoot: path.resolve(__dirname, '..', 'build'),
-    remoteRoot: `/public_html/draft/${process.env.NODE_ENV === 'production' ? 'prod' : 'draft'}`,
+    localRoot,
+    remoteRoot,
     exclude: ['.git', '.idea', 'tmp/*']
 }, err => {
     if (!bar.complete) {
@@ -49,12 +57,3 @@ ftpDeploy.deploy({
 
     console.log('finished deploy!');
 });
-// client
-// .on('ready', () => {
-// // Delete folder?
-// })
-// .connect({
-//     host: process.env.FTP_SERVER,
-//     user: process.env.FTP_USERNAME,
-//     password: process.env.FTP_PASSWORD
-// });

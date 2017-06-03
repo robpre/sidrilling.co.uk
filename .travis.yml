@@ -13,11 +13,11 @@ script:
   - export NODE_ENV=production
   - npm run build
   - if [ "$TRAVIS_BRANCH" == "master" ]; then
-      export NODE_ENV="development"
+      export NODE_ENV="development";
     fi
   - if [ "$TRAVIS_BRANCH" == "master" ]; then
-      export TRACKING_CODE="UA-96594891-2"
-      export NODE_ENV="production"
+      export TRACKING_CODE="UA-96594891-2";
+      export NODE_ENV="production";
     fi
   - npm run deploy-drafts;
 branches:
