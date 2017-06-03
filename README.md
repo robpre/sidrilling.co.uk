@@ -6,12 +6,16 @@ This repository is responsible for the data displayed on sidrilling.co.uk
 
 ## Instructions
 
-- Navigate to the contents which you wish to edit (see below)
+- Navigate to the contents which you wish to edit [see below](#resources)
 
 - Open the file (the file will usually end in ".md")
 
 - Click the small edit icon 
+![Edit icon](./doc/github_edit.png?raw=true "Edit icon")
 
+- make the changes [see the markdown cheatsheet](#markdown-cheatsheet)
+    - *Important* Do not edit the meta data between the triple dashes `---` (the yellow section marked at (1)) unless you know what you're doing.  
+![Editor screen](./doc/github_markdown_sections.png?raw=true "The area marked with the yellow box (1) should be left alone. Feel free to modify the section at (2)") 
 
 ## Resources
 
