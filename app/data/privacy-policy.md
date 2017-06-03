@@ -6,7 +6,7 @@ layout: layout.hbs
 
 This Application collects some Personal Data from its Users.
 ## Data Controller and Owner
-SI Drilling Cable Percussion Ltd. 9 Vera Road, Norwich NR13 6QP
+S I Drilling Cable Percussion Ltd. 9 Vera Road, Norwich NR13 6QP
 
 **Owner contact email**: [privacy@sidrilling.co.uk](mailto:privacy@sidrilling.co.uk)
 

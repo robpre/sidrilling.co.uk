@@ -4,7 +4,7 @@
  * theme 3: #E5EEC8
  *
  * anchor: #6b43ee
- * focus: #be389c
+ * focus: #8f2643
  * active: #439eee
  *
  * color: #3A3A3A;
@@ -33,6 +33,10 @@ textarea {
     font-weight: normal;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+}
+
 html, body {
     font-size: 16px;
     padding: 0;
@@ -48,7 +52,7 @@ a {
 }
 
 a:focus, a:hover {
-    color: #be389c;
+    color: #8f2643;
 }
 
 a:active {
@@ -57,7 +61,7 @@ a:active {
 
 .button:focus, .button:hover,
 button:focus, button:hover {
-    background: #be389c;
+    background: #8f2643;
 }
 
 .button:active,

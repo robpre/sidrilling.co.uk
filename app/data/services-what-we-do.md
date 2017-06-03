@@ -7,7 +7,7 @@ layout: what-we-do.hbs
 ## Why
 
 Cable percussion drilling or site investigation (SI) drilling is necessary to determine a depth and description of the geological strata in specific locations, on land and (occasionally) on water.
-Generally SI drilling is required for engineering purpose with a myriad of objectives. Essentially these objectives are to obtain soil samples and consequently results from boreholes drilled in the field.
+Generally S I Drilling is required for engineering purpose with a myriad of objectives. Essentially these objectives are to obtain soil samples and consequently results from boreholes drilled in the field.
 The results inform our clients of the necessary steps needed to determine foundation solutions in substructure and infrastructure design and development.
 Geotechnical, geoenvironmental, geological and hydrological information that can only come from the ground benefits people, property and the environment.
 Borehole can be drilled to achieve a water well – dad has to say more about this

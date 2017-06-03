@@ -65,3 +65,11 @@
 
 /* ========================================= Capabilities */
 /* ========================================= Contact */
+
+/* ========================================= media style overrides */
+
+@media screen and (max-width: 39.9375em) {
+    .home-splash {
+        height: 65vh;
+    }
+}

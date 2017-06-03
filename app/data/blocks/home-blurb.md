@@ -1,8 +1,6 @@
 ---
 blockName: home-page-blurb
 ---
-# SI Drilling cable percussion ltd.
-
 Borehole specialists in cable percussion drilling
 
 We provide consistent professional expertise and experience for your exact site investigation projects

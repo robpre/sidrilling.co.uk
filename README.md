@@ -1,4 +1,4 @@
-# SI Drilling website files
+# S I Drilling website files
 
 Travis is used to make the site build out, the latest build was: [![Build Status](https://travis-ci.org/RpprRoger/sidrilling.co.uk.svg?branch=develop)](https://travis-ci.org/RpprRoger/sidrilling.co.uk)
 
