@@ -12,12 +12,14 @@ before_script:
 script:
   - export NODE_ENV=production
   - npm run build
-  - if [ "$TRAVIS_BRANCH" == "develop" ]; then
-      npm run deploy-drafts;
+  - if [ "$TRAVIS_BRANCH" == "master" ]; then
+      export NODE_ENV="development"
     fi
   - if [ "$TRAVIS_BRANCH" == "master" ]; then
-      TRACKING_CODE="UA-96594891-2" npm run deploy-drafts;
+      export TRACKING_CODE="UA-96594891-2"
+      export NODE_ENV="production"
     fi
+  - npm run deploy-drafts;
 branches:
   only:
     - develop

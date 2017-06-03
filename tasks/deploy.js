@@ -36,7 +36,7 @@ ftpDeploy.deploy({
     password: process.env.FTP_PASSWORD,
     port: 21,
     localRoot: path.resolve(__dirname, '..', 'build'),
-    remoteRoot: '/public_html/draft/',
+    remoteRoot: `/public_html/draft/${process.env.NODE_ENV === 'production' ? 'prod' : 'draft'}`,
     exclude: ['.git', '.idea', 'tmp/*']
 }, err => {
     if (!bar.complete) {

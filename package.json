@@ -10,7 +10,7 @@
     "debug": "node --debug --inspect tasks/dev.js",
     "build": "node metalsmith.js",
     "postbuild": "./tasks/uglify build/js/common.js",
-    "deploy-drafts": "TARGET_ENV=drafts node ./tasks/deploy.js",
+    "deploy-drafts": "node ./tasks/deploy.js",
     "deploy-locally": "node -r dotenv/config ./tasks/deploy.js"
   },
   "author": "Robert Preus-MacLaren",
