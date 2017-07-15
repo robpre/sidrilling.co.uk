@@ -1,16 +1,21 @@
 <figure class="media-object">
     <div class="media-object-section">
-        <div class="thumbnail">
-            <img alt="image of {{title}}" src="/content-images/{{image}}">
-        </div>
+        {{#if (fileExists '/content-images/' image)}}
+            <div class="thumbnail">
+                <img alt="image of {{title}}" src="/content-images/{{image}}">
+            </div>
+        {{/if}}
     </div>
     <div class="media-object-section">
-        <h4 id="{{safeString title}}">{{title}}</h4>
+        <h2 id="{{safeString title}}">{{title}} {{#if subtitle}}<sub>{{subtitle}}</sub>{{/if}}</h2>
         <figcaption>{{{contents}}}</figcaption>
 
-        {{#each nestedObject}}
-            <h5>{{nestedObjectIntro}}</h5>
-            {{>media-object nestedObject}}
-        {{/each}}
+        {{#if links}}
+            <ul class="related-links">
+                {{#each links}}
+                    <li><a href="{{href}}">{{name}}</a></li>
+                {{/each}}
+            </ul>
+        {{/if}}
     </div>
 </figure>

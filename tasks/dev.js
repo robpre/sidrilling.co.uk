@@ -6,6 +6,8 @@ const nodePath = require('path');
 const bodyParser = require('body-parser');
 const cheerio = require('cheerio');
 
+process.env.NODE_ENV = process.env.NODE_ENV || 'development';
+
 const app = express();
 const server = http.createServer(app);
 const reloadServer = reload(server, app, true);

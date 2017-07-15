@@ -64,6 +64,11 @@
 }
 
 /* ========================================= Capabilities */
+/* ========================================= Equipment */
+.layout-file-equipment h2 sub {
+    display: inline-block;
+    font-size: 0.5em;
+}
 /* ========================================= Contact */
 
 /* ========================================= media style overrides */

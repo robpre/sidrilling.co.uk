@@ -73,6 +73,16 @@ const sidrilling = Metalsmith(__dirname + '/app')
     .use(findHelpers({
         'directory': 'helpers'
     }))
+    .use(function(files) {
+        const names = Object.keys(files);
+
+        names.forEach(f => {
+            const obj = files[f];
+
+            obj.fileUrl = '/' + f.replace(/\/?index.html$/, '');
+            obj.allFiles = names;
+        });
+    })
     .use(layouts({
         engine: 'handlebars',
         partials: './views/partials',

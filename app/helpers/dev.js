@@ -1,10 +1,8 @@
 if (process.env.NODE_ENV === 'production') {
-    module.exports = () => {};
+    module.exports = () => '';
 } else {
-    module.exports = (data) => {
-        debugger;
-
-        console.log(data);
+    module.exports = (...data) => {
+        console.log(...data);
 
         return '';
     };

@@ -5,7 +5,7 @@
         </div>
         <div class="columns">
             {{#each jobs}}
-                {{> media_object this}}
+                {{> media_object this links=(linkToEquipments this.equipment)}}
             {{/each}}
         </div>
     </div>

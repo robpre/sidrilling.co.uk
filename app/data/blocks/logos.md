@@ -1,8 +1,6 @@
 ---
 blockName: logos
 ---
-[test]: http://placehold.it/100x100
 
-- [![first image](http://placehold.it/100x100)](#)
-- [![first image][test]](#)
-- [![first image][test]](#)
+- [![Federation of Small Businesses Logo](/content-images/FSBLog_mem.jpg)](https://www.fsb.org.uk/)
+- [![British Drilling Association logo](/content-images/bda-logo.gif)](http://www.britishdrillingassociation.co.uk/Members/SI-Drilling-Cable-Percussion-Ltd)

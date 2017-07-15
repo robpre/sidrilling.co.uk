@@ -1,9 +1,9 @@
 <nav {{#if classes}}class="{{classes}}"{{/if}}>
     <ul class="menu {{#if vertical}}vertical{{/if}}">
-        <li><a href="/"><span>Home</span></a></li>
-        <li><a href="/services-what-we-do"><span>What we do</span></a></li>
-        <li><a href="/team-who-we-are"><span>Who we are</span></a></li>
-        <li><a href="/equipment"><span>Equipment</span></a></li>
-        <li><a href="/case-studies"><span>Case Studies</span></a></li>
+        <li>{{#anc '/'}}<span>Home</span>{{/anc}}</li>
+        <li>{{#anc '/services-what-we-do'}}<span>What we do</span>{{/anc}}</li>
+        <li>{{#anc '/team-who-we-are'}}<span>Who we are</span>{{/anc}}</li>
+        <li>{{#anc '/equipment'}}<span>Equipment</span>{{/anc}}</li>
+        <li>{{#anc '/case-studies'}}<span>Case Studies</span>{{/anc}}</li>
     </ul>
 </nav>
