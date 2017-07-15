@@ -17,13 +17,20 @@ function actionOnHamburger() {
 }
 var last = $head.outerHeight();
 
+var fixScroll = debounce(function () {
+    var top = $head.outerHeight();
+    
+    if (Math.round(top) !== Math.round(last)) {
+        window.scrollBy(0, top - last);
+        last = top;
+    }
+}, 100);
+
 var repadContent = debounce(function repadContent() {
     var top = $head.outerHeight();
     var tail = $tail.outerHeight();
 
-    if (Math.round(top) !== Math.round(last)) {
-        window.scrollBy(0, top - last);
-    }
+    fixScroll();
 
     $main.css({
         'padding-top': top,
@@ -33,7 +40,7 @@ var repadContent = debounce(function repadContent() {
     $main.find('.splash').css({
         'margin-top': -top
     });
-});
+}, 100);
 
 repadContent();
 
