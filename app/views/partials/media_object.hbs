@@ -11,6 +11,7 @@
         <figcaption>{{{contents}}}</figcaption>
 
         {{#if links}}
+            {{#if linksBlurb}}<h3>{{linksBlurb}}</h3>{{/if}}
             <ul class="related-links">
                 {{#each links}}
                     <li><a href="{{href}}">{{name}}</a></li>

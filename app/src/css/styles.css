@@ -63,13 +63,23 @@
     padding: 0 1rem;
 }
 
-/* ========================================= Capabilities */
 /* ========================================= Equipment */
 .layout-file-equipment h2 sub {
     display: inline-block;
     font-size: 0.5em;
 }
+
 /* ========================================= Contact */
+
+/* ========================================= Case studies */
+
+.layout-file-case-studies h2 {
+    font-size: 1.5rem;
+}
+
+.layout-file-case-studies h3 {
+    font-size: 1rem;
+}
 
 /* ========================================= media style overrides */
 
