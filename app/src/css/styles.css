@@ -8,7 +8,7 @@
 
 /* ========================================= Home */
 .home-splash {
-    height: 50vh;
+    height: 30vh;
 }
 
 .home-splash figure {
@@ -85,6 +85,6 @@
 
 @media screen and (max-width: 39.9375em) {
     .home-splash {
-        height: 65vh;
+        /* height: 65vh; */
     }
 }
