@@ -204,3 +204,12 @@ footer .column-offset {
         padding: .625rem 0 0;
     }
 }
+
+@media screen and (max-width: 39.9375em) {
+    .media-object-section + .media-object-section {
+        display: block;
+    }
+    .media-object-section img {
+        max-width: 100%;
+    }
+}
