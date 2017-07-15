@@ -15,10 +15,16 @@ function actionOnHamburger() {
         $mobileNav.slideUp();
     }
 }
+var last = $head.outerHeight();
 
 var repadContent = debounce(function repadContent() {
     var top = $head.outerHeight();
     var tail = $tail.outerHeight();
+
+    if (Math.round(top) !== Math.round(last)) {
+        window.scrollBy(0, top - last);
+    }
+
     $main.css({
         'padding-top': top,
         'padding-bottom': tail,
@@ -43,10 +49,7 @@ $('footer').on('postequalized.zf.equalizer', repadContent);
 $('header').on('load', 'img', repadContent);
 
 // probably not needed anymore
-$(window).on('scroll', debounce(function() {
-    deactivate();
-    repadContent();
-}));
+$(window).on('scroll', deactivate);
 
 function deactivate () {
     $mobileNav.slideUp();
