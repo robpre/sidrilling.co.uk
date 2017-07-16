@@ -15,22 +15,11 @@ function actionOnHamburger() {
         $mobileNav.slideUp();
     }
 }
+
 var last = $head.outerHeight();
-
-var fixScroll = debounce(function () {
-    var top = $head.outerHeight();
-    
-    if (Math.round(top) !== Math.round(last)) {
-        window.scrollBy(0, top - last);
-        last = top;
-    }
-}, 100);
-
 var repadContent = debounce(function repadContent() {
     var top = $head.outerHeight();
     var tail = $tail.outerHeight();
-
-    fixScroll();
 
     $main.css({
         'padding-top': top,
@@ -40,7 +29,38 @@ var repadContent = debounce(function repadContent() {
     $main.find('.splash').css({
         'margin-top': -top
     });
-}, 100);
+
+    var $sticky = $('[data-sticky]');
+    var offset = top / parseInt($sticky.css('font-size').replace('px$', ''));
+
+    var stickyPlugin = $sticky.data('zfPlugin');
+
+    if (stickyPlugin.isStuck) {
+        $sticky.css('margin-top', offset + 'em');
+    }
+
+    stickyPlugin.options.marginTop = '' + offset;
+    $('[data-magellan]').data('zfPlugin').options.barOffset = top;
+
+    if (Math.round(top) !== Math.round(last)) {
+        window.scrollBy(0, top - last);
+        last = top;
+    }
+});
+
+$('body').on('click', 'a', function(evt) {
+    var $el = $(this);
+
+    if ($el[0] && $el[0].nodeName === 'A') {
+        var href = $el.attr('href');
+
+        if (href.indexOf('#') === 0) {
+            evt.preventDefault();
+
+
+        }
+    }
+});
 
 repadContent();
 

@@ -205,11 +205,20 @@ footer .column-offset {
     }
 }
 
-@media screen and (max-width: 39.9375em) {
+.media-object-section + .media-object-section {
+    display: block;
+}
+
+.media-object-section img {
+    max-width: 100%;
+}
+
+@media screen and (min-width: 64em) {
     .media-object-section + .media-object-section {
-        display: block;
+        display: table-cell;
     }
+
     .media-object-section img {
-        max-width: 100%;
+        max-width: auto;
     }
 }

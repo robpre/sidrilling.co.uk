@@ -65,8 +65,7 @@
 
 /* ========================================= Equipment */
 .layout-file-equipment h2 sub {
-    display: inline-block;
-    font-size: 0.5em;
+    font-size: 0.75em;
 }
 
 /* ========================================= Contact */
@@ -86,5 +85,11 @@
 @media screen and (max-width: 39.9375em) {
     .home-splash {
         height: 50vh;
+    }
+}
+
+@media screen and (min-width: 40em) {
+    .layout-file-equipment h2 sub {
+        display: inline-block;
     }
 }
