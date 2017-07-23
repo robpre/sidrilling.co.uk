@@ -10,7 +10,6 @@ notifications:
 before_script:
   - npm run lint
 script:
-  - npm run build
   - if [ "$TRAVIS_BRANCH" == "develop" ]; then
       export NODE_ENV="development";
     fi
@@ -18,7 +17,8 @@ script:
       export TRACKING_CODE="UA-96594891-2";
       export NODE_ENV="production";
     fi
-  - npm run deploy-drafts;
+  - npm run build
+  - npm run deploy
 branches:
   only:
     - develop
