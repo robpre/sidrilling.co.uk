@@ -7,7 +7,7 @@ const ftpDeploy = new FtpDeploy();
 const localRoot = path.resolve(__dirname, '..', 'build');
 
 let remoteRoot;
-if (0&&process.env.NODE_ENV === 'production') {
+if (process.env.NODE_ENV === 'production') {
     remoteRoot = '/public_html/prod/';
     fs.unlinkSync(path.resolve(localRoot, 'robots.txt'));
 } else {
