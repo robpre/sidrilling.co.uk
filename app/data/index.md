@@ -5,7 +5,7 @@ layout: home.hbs
 
 ## History
 
-Bob MacLaren started as an drilling operative in 1989 working for a local drilling company. Later Bob set up S I Drilling as a sole trader in 1995, with a single drilling unit.
+Bob MacLaren started as a drilling operative in 1989 working for a local drilling company. Later Bob set up S I Drilling as a sole trader in 1995, with a single drilling unit.
 
 He took his experience of working within the construction industry as a cable percussion (CP) driller and founded S I Drilling Cable Percussion Ltd in 2005.
 Today we have nine operational drilling rigs and have grown to be one of the countries most respected CP drilling providers and consultants.
