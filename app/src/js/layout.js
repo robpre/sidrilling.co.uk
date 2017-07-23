@@ -31,17 +31,18 @@ var repadContent = debounce(function repadContent() {
     });
 
     var $sticky = $('[data-sticky]');
-    var offset = top / parseInt($sticky.css('font-size').replace('px$', ''));
+    if ($sticky.length) {
+        var offset = top / parseInt($sticky.css('font-size').replace('px$', ''), 10);
+        var stickyPlugin = $sticky.data('zfPlugin');
 
-    var stickyPlugin = $sticky.data('zfPlugin');
+        if (stickyPlugin.isStuck) {
+            $sticky.css('margin-top', offset + 'em');
+        }
 
-    if (stickyPlugin.isStuck) {
-        $sticky.css('margin-top', offset + 'em');
+        stickyPlugin.options.marginTop = '' + offset;
+        $('[data-magellan]').data('zfPlugin').options.barOffset = top;
     }
-
-    stickyPlugin.options.marginTop = '' + offset;
-    $('[data-magellan]').data('zfPlugin').options.barOffset = top;
-
+    
     if (Math.round(top) !== Math.round(last)) {
         window.scrollBy(0, top - last);
         last = top;
