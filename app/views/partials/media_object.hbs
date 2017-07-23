@@ -1,0 +1,22 @@
+<figure class="media-object">
+    <div class="media-object-section">
+        <h2 id="{{safeString title}}">{{title}} {{#if subtitle}}<sub>{{subtitle}}</sub>{{/if}}</h2>
+        <figcaption>
+            {{{contents}}}
+            {{#if (fileExists '/content-images/' image)}}
+                <div class="thumbnail">
+                    <img alt="image of {{title}}" src="/content-images/{{image}}">
+                </div>
+            {{/if}}
+        </figcaption>
+
+        {{#if links}}
+            {{#if linksBlurb}}<h3>{{linksBlurb}}</h3>{{/if}}
+            <ul class="related-links">
+                {{#each links}}
+                    <li><a href="{{href}}">{{name}}</a></li>
+                {{/each}}
+            </ul>
+        {{/if}}
+    </div>
+</figure>

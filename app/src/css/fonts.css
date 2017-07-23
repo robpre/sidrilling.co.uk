@@ -1,0 +1,96 @@
+/**
+ * theme 1: #165F32
+ * theme 2: #9DBE38
+ * theme 3: #E5EEC8
+ *
+ * anchor: #6b43ee
+ * focus: #8f2643
+ * active: #439eee
+ *
+ * color: #3A3A3A;
+ */
+
+/* ========================================= Layout */
+@font-face {
+    font-family: 'Biryani';
+    src: url('./fonts/Biryani-ExtraBold.ttf') format('truetype');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'Biryani';
+    src: url('./fonts/Biryani-DemiBold.ttf') format('truetype');
+    font-weight: normal;
+}
+
+h1, h2, h3, h4, h5, h6,
+body,
+button,
+input,
+select,
+textarea {
+    font-family: Biryani, sans-serif;
+    font-weight: normal;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+}
+
+html, body {
+    font-size: 16px;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    color: #3A3A3A;
+}
+
+a {
+    color: #6b43ee;
+}
+
+a:focus, a:hover {
+    color: #8f2643;
+}
+
+a:active {
+    color: #439eee;
+}
+
+.button:focus, .button:hover,
+button:focus, button:hover {
+    background: #8f2643;
+}
+
+.button:active,
+button:active {
+    color: #439eee;
+}
+
+a[href^="tel://"],
+a[href^="mailto://"] {
+    padding-left: 1.25rem;
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: 1rem;
+}
+
+a[href^="mailto://"] {
+    background-image: url("images/icon/ic_email_black_24dp_2x.png");
+}
+a[href^="mailto://"]:focus, a[href^="mailto://"]:active, a[href^="mailto://"]:hover {
+    background-image: url("images/icon/ic_email_white_24dp_2x.png");
+}
+
+a[href^="tel://"] {
+    background-image: url("images/icon/ic_phone_black_24dp_2x.png");
+}
+a[href^="tel://"]:focus, a[href^="tel://"]:active, a[href^="tel://"]:hover {
+    background-image: url("images/icon/ic_phone_white_24dp_2x.png");
+}
+
+p {
+    text-indent: 1rem;
+}

@@ -1,0 +1,15 @@
+#!/usr/bin/env node
+
+const path = require('path');
+const fs = require('fs');
+const UglifyJS2 = require('uglify-js')
+
+const fileNames = process.argv.slice(2);
+
+fileNames.forEach(name => {
+    console.log(`Uglyfy-ing and saving to ${name}`);
+    const filepath = path.resolve(process.cwd(), name);
+    const { code } = UglifyJS2.minify(filepath);
+
+    fs.writeFileSync(filepath, code);
+});

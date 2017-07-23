@@ -1,0 +1,21 @@
+{{#> layout }}
+    <div class="home-splash">
+        <figure style="transform:translatez(0);background-image:url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDIBCQkJDAsMGA0NGDIhHCEyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMv/AABEIACEAMgMBEQACEQEDEQH/xAGiAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgsQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+gEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoLEQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4+Tl5ufo6ery8/T19vf4+fr/2gAMAwEAAhEDEQA/AKNhaoAK52zc24IFA6UhF1QFXAU0COK13SjLLLLg5NdkK8YpJmToylqjDXSBbWBuJJBuJ6VpCqnKxnKDSMS9iad8oMitJakozjYT5+4ay0Ls+x6/auqjiuA6jXt5AcUCNBGXHSgRl6qI5VaPABPepkb0zjLu2h+dp2Plp2zRGbRXs09WZEusWEA2xQg1repLqR+7j0KZ8Qw5/wBSKXs5dw9tDsd7CM4qTM1rVtgoEzSjO5c0xFS6tRNJkkgUmilKxxPiTT7gK6Q52dTSSszVyvE5bT4bZp/KuhnJxxWt30MWdIPCulEA7+tLnYrGrbXG5ByBUtFGnFcqmATmgRqQ3SlOtMVhkt4McdRSCxzPiGeeW1dIBy3GaqNuoNM46ysWtZDJOCW61TkugKJf/tHH8RqbDNaz/wBXSYzSToKQGlD90UCEm7/SkBlXH3aBmHffdNNAYB6mtCT/AP/Z);background-size:cover;background-position:center center;transition:background-image .45s ease-in-out; padding-bottom: 1.4984391259105099%">
+            <img src="/css/images/big_sand_hand.jpg" style="display: none;" onload="this.parentNode.style['background-image']='url('+this.src+')'" />
+            <figcaption>
+                <div class="row">
+                    <div class="columns small-centered medium-6">
+                        <div class="caption-text">
+                            {{{renderBlock 'home-page-blurb'}}}
+                        </div>
+                    </div>
+                </div>
+            </figcaption>
+        </figure>
+    </div>
+    <div class="row">
+        <div class="columns">
+            {{{contents}}}
+        </div>
+    </div>
+{{/layout}}
