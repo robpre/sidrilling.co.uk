@@ -2,6 +2,7 @@
 title: M4 Motorway
 equipment: Dando 2000 Mk 2, Dando 3000 Mk 2
 date: May 2016 – Present
+image: m4-nights.jpg
 ---
 ### At A Glance
 - Multiple boreholes
