@@ -8,7 +8,7 @@ const localRoot = path.resolve(__dirname, '..', 'build');
 
 let remoteRoot;
 if (process.env.NODE_ENV === 'production') {
-    remoteRoot = '/public_html/prod/';
+    remoteRoot = '/public_html/';
     fs.unlinkSync(path.resolve(localRoot, 'robots.txt'));
 } else {
     remoteRoot = '/public_html/draft/';
