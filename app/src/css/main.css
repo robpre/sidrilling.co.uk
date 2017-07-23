@@ -213,7 +213,7 @@ footer .column-offset {
     max-width: 100%;
 }
 
-@media screen and (min-width: 64em) {
+@media screen and (min-width: 40em) {
     .media-object-section + .media-object-section {
         display: table-cell;
     }

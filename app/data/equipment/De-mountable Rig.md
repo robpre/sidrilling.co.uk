@@ -1,7 +1,7 @@
 ---
 title: De-mountable Rig
 subtitle: (transported disassembled in secure trailer)
-image: de-mountable
+image: de-mountable.jpg
 ---
 
 Capable of drilling to depths of 50m, in certain drilling materials
