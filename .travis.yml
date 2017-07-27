@@ -1,4 +1,7 @@
 language: node_js
+addons:
+  ssh_known_hosts:
+  - ssh.phx.nearlyfreespeech.net
 node_js:
 - 8.1.4
 install:
@@ -25,3 +28,4 @@ branches:
 before_install:
 - openssl aes-256-cbc -K $encrypted_3a54c86f385b_key -iv $encrypted_3a54c86f385b_iv
   -in deploy-keys/draft.enc -out deploy-keys/draft -d
+- chmod 600 deploy-keys/draft
