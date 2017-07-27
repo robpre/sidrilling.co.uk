@@ -11,7 +11,10 @@ before_script:
 - npm run lint
 script:
 - if [ "$TRAVIS_BRANCH" == "develop" ]; then export NODE_ENV="development"; fi
-- if [ "$TRAVIS_BRANCH" == "master" ]; then export TRACKING_CODE="UA-96594891-2"; export NODE_ENV="production"; fi
+- if [ "$TRAVIS_BRANCH" == "master" ]; then 
+    export TRACKING_CODE="UA-96594891-2";
+    export NODE_ENV="production";
+  fi
 - npm run build
 - npm run deploy
 - [ "$TRAVIS_BRANCH" == "develop" ] && rsync -a -e "ssh -i deploy-keys/draft" build/ $SCP_USERNAME@$SCP_HOST:
