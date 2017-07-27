@@ -17,11 +17,11 @@ script:
   fi
 - npm run build
 - npm run deploy
-- [ "$TRAVIS_BRANCH" == "develop" ] && rsync -a -e "ssh -i deploy-keys/draft" build/ $SCP_USERNAME@$SCP_HOST:
+- if [ "${TRAVIS_BRANCH}" == "develop" ]; then rsync -aP -e "ssh -i deploy-keys/draft" build/ $SCP_USERNAME@$SCP_HOST:~ ; fi
 branches:
   only:
   - develop
   - master
 before_install:
 - openssl aes-256-cbc -K $encrypted_3a54c86f385b_key -iv $encrypted_3a54c86f385b_iv
-  -in draft.enc -out draft -d
+  -in deploy-keys/draft.enc -out deploy-keys/draft -d
