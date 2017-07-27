@@ -20,7 +20,7 @@ script:
   fi
 - npm run build
 - npm run deploy
-- if [ "${TRAVIS_BRANCH}" == "develop" ]; then rsync -aP -e "ssh -i deploy-keys/draft" build/ $SCP_USERNAME@$SCP_HOST:~ ; fi
+- if [ "${TRAVIS_BRANCH}" == "develop" ]; then rsync -aP -e "ssh -i deploy-keys/draft" build/ $SCP_USERNAME@$SCP_HOST:/home/public ; fi
 branches:
   only:
   - develop
