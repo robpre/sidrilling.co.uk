@@ -1,25 +1,35 @@
 language: node_js
+addons:
+  ssh_known_hosts:
+  - ssh.phx.nearlyfreespeech.net
 node_js:
-  - '8.1.4'
+- 8.1.4
 install:
-  - npm install --production
+- npm install --production
 notifications:
   email:
-      - sales@sidrilling.co.uk
-      - rpprroger@gmail.com
+  - sales@sidrilling.co.uk
+  - rpprroger@gmail.com
 before_script:
-  - npm run lint
+- npm run lint
 script:
-  - if [ "$TRAVIS_BRANCH" == "develop" ]; then
-      export NODE_ENV="development";
-    fi
-  - if [ "$TRAVIS_BRANCH" == "master" ]; then
-      export TRACKING_CODE="UA-96594891-2";
-      export NODE_ENV="production";
-    fi
-  - npm run build
-  - npm run deploy
+- if [ "$TRAVIS_BRANCH" == "develop" ]; then
+    export NODE_ENV="development";
+    export SCP_USERNAME=$NFS_DRAFT;
+  fi
+- if [ "$TRAVIS_BRANCH" == "master" ]; then 
+    export TRACKING_CODE="UA-96594891-2";
+    export NODE_ENV="production";
+    export SCP_USERNAME=$NFS_PROD;
+  fi
+- npm run build
+# npm run deploy
+- rsync -aP -e "ssh -i deploy-keys/draft" build/ $SCP_USERNAME@$SCP_HOST:/home/public
 branches:
   only:
-    - develop
-    - master
+  - develop
+  - master
+before_install:
+- openssl aes-256-cbc -K $encrypted_3a54c86f385b_key -iv $encrypted_3a54c86f385b_iv
+  -in deploy-keys/draft.enc -out deploy-keys/draft -d
+- chmod 600 deploy-keys/draft
