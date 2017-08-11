@@ -19,7 +19,7 @@ S I Drilling Cable Percussion Ltd have nine cable percussive rigs in operation.
 - [One low-headroom CP rig](/equipment/#Dando_150)
 - [One fully demountable CP rig](/equipment/#De_mountable_Rig_transported_disassembled_in_secure_trailer_Transit_)
 
-All Drillers hold a NVQ Level two Land Drilling Certificate.  Each Driller and second man holds CSCS cards as well a number of other accreditations including SSSTS
-All rigs and equipment are maintained to a high standard, all have the required LOLLER certificates and appropriate insurance.
+All Drillers hold a NVQ Level two Land Drilling Certificate.  Each Driller and second man holds CSCS cards as well a number of other accreditations including SSSTS.
+All rigs and equipment are maintained to a high standard, all have the required LOLER certificates and appropriate insurance.
 Our team in the office at headquarters in Norwich provide information and consultation to our clients and practical back-up to our drilling crews in the field.
 Collectively, we have over 100 years of CP drilling experience within the company. We have an impressive list of clients including consulting engineers, architects, local and statutory authorities, government bodies, limited companies and private individuals.

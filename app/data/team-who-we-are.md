@@ -7,10 +7,10 @@ layout: layout.hbs
 ## Office team
 The team in the office at headquarters in Norwich provide backup for the team drilling in the field as well as supplying information and support to our clients
 
-- Bob MacLaren- Company Director
-- Helen Preus- Company Director/Admin
-- Lily Preus- MacLaren- Admin/Accounts/Office support
-- Julie Forrest- Book-keeping/Admin
+- Bob MacLaren - Company Director
+- Helen Preus - Company Director
+- Lily Preus-MacLaren - Accounts Administrator
+- Julie Forrest- Book-keeping
 
 ## Drilling teams
 
