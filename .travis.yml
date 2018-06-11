@@ -3,7 +3,7 @@ addons:
   ssh_known_hosts:
   - ssh.phx.nearlyfreespeech.net
 node_js:
-- 8.1.4
+- 9.11.1
 install:
 - npm install --production
 notifications:
@@ -24,7 +24,7 @@ script:
   fi
 - npm run build
 # npm run deploy
-- rsync -aP -e "ssh -i deploy-keys/draft" build/ $SCP_USERNAME@$SCP_HOST:/home/public
+- [ ! -z "$SCP_USERNAME" ] && rsync -aP -e "ssh -i deploy-keys/draft" build/ $SCP_USERNAME@$SCP_HOST:/home/public
 branches:
   only:
   - develop
