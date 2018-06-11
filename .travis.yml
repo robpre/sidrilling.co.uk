@@ -29,6 +29,7 @@ branches:
   only:
   - develop
   - master
+  - /^greenkeeper/.*$/
 before_install:
 - openssl aes-256-cbc -K $encrypted_3a54c86f385b_key -iv $encrypted_3a54c86f385b_iv
   -in deploy-keys/draft.enc -out deploy-keys/draft -d
