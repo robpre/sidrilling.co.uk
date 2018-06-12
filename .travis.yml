@@ -23,8 +23,10 @@ script:
     export SCP_USERNAME=$NFS_PROD;
   fi
 - npm run build
-- if [ "$TRAVIS_PULL_REQUEST" = "false" ] && [ ! -z "$SCP_USERNAME" ]; then
-    rsync -aP -e "ssh -i deploy-keys/draft" build/ $SCP_USERNAME@$SCP_HOST:/home/public
+- if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then
+    if [ ! -z "$SCP_USERNAME" ]; then
+      rsync -aP -e "ssh -i deploy-keys/draft" build/ $SCP_USERNAME@$SCP_HOST:/home/public
+    fi
   fi
 branches:
   only:
