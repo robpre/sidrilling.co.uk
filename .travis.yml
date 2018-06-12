@@ -17,14 +17,15 @@ script:
     export NODE_ENV="development";
     export SCP_USERNAME=$NFS_DRAFT;
   fi
-- if [ "$TRAVIS_BRANCH" == "master" ]; then 
+- if [ "$TRAVIS_BRANCH" == "master" ]; then
     export TRACKING_CODE="UA-96594891-2";
     export NODE_ENV="production";
     export SCP_USERNAME=$NFS_PROD;
   fi
 - npm run build
-# npm run deploy
-- [ ! -z "$SCP_USERNAME" ] && rsync -aP -e "ssh -i deploy-keys/draft" build/ $SCP_USERNAME@$SCP_HOST:/home/public
+- if [ "$TRAVIS_PULL_REQUEST" = "false" ] && [ ! -z "$SCP_USERNAME" ]; then
+    rsync -aP -e "ssh -i deploy-keys/draft" build/ $SCP_USERNAME@$SCP_HOST:/home/public
+  fi
 branches:
   only:
   - develop
