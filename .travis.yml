@@ -8,7 +8,6 @@ install:
 - npm install --production
 notifications:
   email:
-  - sales@sidrilling.co.uk
   - rpprroger@gmail.com
 before_script:
 - npm run lint
