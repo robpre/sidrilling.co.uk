@@ -1,10 +1,9 @@
 ---
 title: Testing Equipment
 image: testing.jpg
-draft: true
 ---
 
-Down the hole testing can also include: 
+Down the hole testing can also include:
 
 - SPT
 - U100
@@ -13,4 +12,4 @@ Down the hole testing can also include:
 - Piston sampling
 - Plastic stand pipe
 - Stainless steel stand pipe
-- Wire vibrating Piezometer 
+- Wire vibrating Piezometer
