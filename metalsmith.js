@@ -9,19 +9,10 @@ const postcss = require('metalsmith-postcss');
 const findHelpers = require('metalsmith-discover-helpers');
 const externalLinks = require('metalsmith-external-links');
 const metaList = require('metalsmith-metadata-as-list');
+const discoverPartials = require('metalsmith-discover-partials')
 
 const copyFile = require('./app/plugins/copyFile');
 const wrapHeadings = require('./app/plugins/wrapHeadings');
-
-const entryFiles = ['./app/src/js/main.js'];
-var curryPlugin;
-// curryPlugin = (factorBundle => (b, opts) => {
-//     const options = Object.assign({}, opts, {
-//         outputs: ['build/js/script.js']
-//     });
-
-//     return factorBundle(b, options);
-// })(require('factor-bundle'));
 
 const sidrilling = Metalsmith(__dirname + '/app')
     .metadata({
@@ -30,21 +21,28 @@ const sidrilling = Metalsmith(__dirname + '/app')
         description: '',
         trackingCode: process.env.TRACKING_CODE || 'UA-96594891-1'
     })
-    .source('./data')
+    .source('./')
     .destination('../build')
     .clean(true)
     .use(browserify({
-        dest: 'js/common.js',
-        entries: entryFiles,
-        sourcemaps: process.env.NODE_ENV !== 'production',
-        plugin: [curryPlugin]
+        entries: ['src/js/main.js'],
+        browserifyOptions: {
+            sourcemaps: process.env.NODE_ENV !== 'production',
+            "transform": [[
+                "babelify",
+                {
+                    "presets": ["@babel/preset-env"],
+                    ignore: [/\/node_modules\/foundation-sites/]
+                }
+            ]]
+        },
     }))
     .use(assets({
         origin: './public/',
         destination: './'
     }))
     .use(copyFile({
-        origin: './src/css/styles.css',
+        origin: 'src/css/styles.css',
         destination: 'css/styles.css'
     }))
     .use(postcss({
@@ -59,7 +57,7 @@ const sidrilling = Metalsmith(__dirname + '/app')
             inline: false
         }
     }))
-    .use(metaList({handle: 'equipment'}))
+    .use(metaList({ handle: 'equipment' }))
     .use(collections({
         jobs: 'jobs/*.md',
         equipment: 'equipment/*.md',
@@ -73,6 +71,10 @@ const sidrilling = Metalsmith(__dirname + '/app')
     .use(findHelpers({
         'directory': 'helpers'
     }))
+    .use(discoverPartials({
+        directory: 'views/partials',
+        pattern: /\.hbs$/
+    }))
     .use(function(files) {
         const names = Object.keys(files);
 
@@ -84,10 +86,9 @@ const sidrilling = Metalsmith(__dirname + '/app')
         });
     })
     .use(layouts({
-        engine: 'handlebars',
-        partials: './views/partials',
-        directory: './views/layouts',
-        partialExtension: '.hbs'
+        default: 'layout.hbs',
+        directory: 'views/layouts/',
+        pattern: '**/*.html',
     }))
     .use(externalLinks({
         domain: 'sidrilling.co.uk'

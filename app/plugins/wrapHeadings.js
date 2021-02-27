@@ -36,7 +36,7 @@ module.exports = (files) => {
                 `);
             });
 
-            files[k].contents = new Buffer($.html());
+            files[k].contents = Buffer.from($.html());
         }
     });
 };
