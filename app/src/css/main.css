@@ -222,3 +222,7 @@ footer .column-offset {
         max-width: auto;
     }
 }
+
+.quick-contact a:hover {
+    color: #ff93b1;
+}

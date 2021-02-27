@@ -10,7 +10,7 @@ process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 
 const app = express();
 const server = http.createServer(app);
-const reloadServer = reload(server, app, true);
+const reloadServer = reload(app);
 
 app.use(bodyParser.json());
 app.use(express.static(nodePath.resolve(__dirname, '..', 'build'), {fallthrough: false}));
@@ -58,7 +58,7 @@ function build(cb) {
 
                 $('body').append('<script src="/reload/reload.js"></script>');
 
-                ms[k].contents = new Buffer($.html());
+                ms[k].contents = Buffer.from($.html());
             }
         });
     }).build(cb);
@@ -92,7 +92,7 @@ gaze(globs, { cwd }, (err, watcher) => {
 
             if (building <= 0) {
                 building = 0;
-                reloadServer.reload();
+                reloadServer.then(r => r.reload());
             }
         });
     });

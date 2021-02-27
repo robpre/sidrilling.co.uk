@@ -7,7 +7,7 @@ module.exports = ({origin: originFile, destination}) => (files, metalsmith, done
 
     files[destination] = {
         mode: Mode(fs.statSync(originFile)).toOctal(),
-        contents: new Buffer(fs.readFileSync(originFile))
+        contents: fs.readFileSync(originFile)
     };
 
     done();

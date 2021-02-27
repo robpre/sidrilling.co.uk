@@ -1,1 +1,1 @@
-module.exports = str => str.replace(/\.hbs$/, '');
+module.exports = (str) => (str  || 'layout.hbs').replace(/\.hbs$/, '');
