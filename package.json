@@ -12,9 +12,7 @@
     "dev": "node --inspect tasks/dev.js",
     "debug": "node --inspect-brk tasks/dev.js",
     "build": "node metalsmith.js",
-    "postbuild": "uglifyjs --compress --mangle -o build/src/js/main.js -- build/src/js/main.js",
-    "deploy": "node ./tasks/deploy.js",
-    "deploy-locally": "node -r dotenv/config ./tasks/deploy.js"
+    "postbuild": "uglifyjs --compress --mangle -o build/src/js/main.js -- build/src/js/main.js"
   },
   "author": "Robert Preus-MacLaren",
   "license": "UNLICENSED",

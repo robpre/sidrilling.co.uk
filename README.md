@@ -1,6 +1,6 @@
 # S I Drilling website files
 
-Travis is used to make the site build out, the latest build was: [![Build Status](https://travis-ci.org/RpprRoger/sidrilling.co.uk.svg?branch=develop)](https://travis-ci.org/RpprRoger/sidrilling.co.uk) [![Greenkeeper badge](https://badges.greenkeeper.io/RpprRoger/sidrilling.co.uk.svg)](https://greenkeeper.io/)
+[![Greenkeeper badge](https://badges.greenkeeper.io/RpprRoger/sidrilling.co.uk.svg)](https://greenkeeper.io/)
 
 This repository is responsible for the data displayed on sidrilling.co.uk
 
@@ -36,7 +36,5 @@ It will become immediately available on the production site.
 ## Resources
 
 - ## [Click here to edit the contents](/app)
-
-- ## [Click here to see the progress of the latest change](https://travis-ci.org/RpprRoger/sidrilling.co.uk)
 
 - ## [Markdown cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
