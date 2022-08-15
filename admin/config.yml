@@ -1,0 +1,9 @@
+backend:
+  name: github
+  repo: robpre/sidrilling.co.uk # Path to your Github/Gitlab repository
+  branch: nextjs-vercel-netlify # Branch to update
+  base_url: https://www.sidrilling.co.uk
+  auth_endpoint: api/auth
+
+media_folder: app/content-images
+local_backend: true
