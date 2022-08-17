@@ -1,5 +1,5 @@
 import { AuthorizationCode } from "simple-oauth2";
-import { oauth } from "@config";
+import { oauth } from "@/config";
 
 export default async (req, res) => {
   const { host } = req.headers;

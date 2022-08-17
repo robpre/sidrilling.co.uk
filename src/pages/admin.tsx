@@ -2,7 +2,7 @@ import CMS from "netlify-cms-app";
 import { CmsConfig, CmsField } from "netlify-cms-core";
 import { useEffect } from "react";
 
-import {} from "@config";
+import {} from "@/config";
 
 const pagesFields = (): CmsField[] => [
   { label: "Title", name: "title", widget: "string" },

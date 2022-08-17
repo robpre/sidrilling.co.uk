@@ -1,0 +1,14 @@
+{
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "sidrilling.co.uk"
+        }
+      ],
+      "destination": "https://www.sidrilling.co.uk/:path*"
+    }
+  ]
+}
