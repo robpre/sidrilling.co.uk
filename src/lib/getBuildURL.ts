@@ -1,5 +1,5 @@
 import { createHash } from "crypto";
-import { BRANCH_NAME, BASE_URL } from "@/config";
+import { BRANCH_NAME, BASE_URL, NODE_ENV } from "@/config";
 
 const sha256 = (s: string) => {
   const h = createHash("sha256");
@@ -12,6 +12,10 @@ const sha256 = (s: string) => {
 export const getBuildURL = () => {
   if (BASE_URL) {
     return BASE_URL;
+  }
+
+  if (NODE_ENV === "development") {
+    return "http://localhost:3000";
   }
 
   if (!BRANCH_NAME || BRANCH_NAME === "main") {

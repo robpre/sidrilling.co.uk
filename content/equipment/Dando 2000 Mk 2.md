@@ -1,6 +1,6 @@
 ---
 title: Dando 2000 Mk 2
-image: dando2000.jpg
+image: /content/dando2000.jpg
 ---
 
 We have five rigs of this type.

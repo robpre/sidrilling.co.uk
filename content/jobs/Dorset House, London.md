@@ -1,8 +1,10 @@
 ---
 title: Dorset House, London
-equipment: Dando 150
+equipmentID:
+  - Dando 150
 date: August 2016
 ---
+
 ### At A Glance
 
 - three 10m boreholes in 200mm casing with installations

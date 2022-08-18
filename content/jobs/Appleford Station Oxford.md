@@ -1,10 +1,13 @@
 ---
 title: Appleford Station Oxford
-equipment: De-mountable Rig
+equipmentID:
+  - De-mountable Rig
 date: June 2016
 ---
+
 ### At A Glance
-- One 15m borehole  at railway station
+
+- One 15m borehole at railway station
 
 ### The Site
 

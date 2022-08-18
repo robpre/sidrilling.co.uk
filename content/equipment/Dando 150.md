@@ -1,6 +1,6 @@
 ---
 title: Dando 150
-image: low-headroom.jpg
+image: /content/low-headroom.jpg
 ---
 
 Low headroom/restricted access rig (Trailer mounted)

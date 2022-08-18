@@ -1,7 +1,7 @@
 ---
 title: De-mountable Rig
 subtitle: (transported disassembled in secure trailer)
-image: de-mountable.jpg
+image: /content/de-mountable.jpg
 ---
 
 Capable of drilling to depths of 50m, in certain drilling materials
@@ -10,9 +10,9 @@ Again this rig is used in basements, warehouses and difficult to access projects
 To achieve this depth the borehole would be cased to a maximum depth of 25m then open holed to 50m, using 200mm/150mm casing size. In the right drilling conditions 250mm could be used to a max depth of 5m.
 
 - Diesel PowerPlant: Yanmar 10BH (single cylinder):
-    - Requires fume extraction in enclosed spaces, which we supply
+  - Requires fume extraction in enclosed spaces, which we supply
 - Electric PowerPlant: Siemens 415v,30amp
-    - Requires 3 phase power, either on site or we can hire a generator
+  - Requires 3 phase power, either on site or we can hire a generator
 - Min site access width: 600mm
 - Min erected drill height: 2.4m
 - Min erected drill area: 1.6m x 4m

@@ -1,6 +1,6 @@
 ---
 title: Dando 3000 Mk 2
-image: dando3000.jpg
+image: /content/dando3000.jpg
 ---
 
 Mechanical Winch 3 Tonne max lift

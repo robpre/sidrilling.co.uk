@@ -84,3 +84,9 @@ test("truncated url from git branch", () => {
     "https://sidrillingcouk-git-this-is-really-an-extremely-lo-UqlqSk-robpre.vercel.app"
   );
 });
+
+test("development env url", () => {
+  mockedConfig.setVal("NODE_ENV", "development");
+
+  expect(getBuildURL()).toBe("http://localhost:3000");
+});

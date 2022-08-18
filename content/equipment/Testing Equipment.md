@@ -1,6 +1,6 @@
 ---
 title: Testing Equipment
-image: testing.jpg
+image: /content/testing.jpg
 ---
 
 Down the hole testing can also include:
