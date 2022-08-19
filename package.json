@@ -9,9 +9,7 @@
   "license": "GPL-3.0-only",
   "scripts": {
     "dev": "concurrently 'next dev' 'netlify-cms-proxy-server'",
-    "//build": "next build",
-    "prebuild": "next build",
-    "build": "next export -o build/",
+    "build": "next build",
     "start": "next start",
     "export": "next build && next export -o ./dist",
     "test": "jest",
